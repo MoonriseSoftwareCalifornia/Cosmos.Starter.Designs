@@ -17,7 +17,7 @@
     <!--Header-Begin-->
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-block" style="z-index: 2000;">
             <div class="container-fluid">
                 <!-- Navbar brand -->
                 <a class="navbar-brand nav-link" target="_blank" href="https://github.com/CosmosSoftware/Cosmos.Cms">
@@ -74,21 +74,7 @@
         </nav>
         <!-- Navbar -->
     </header>
-    <!-- 
-        Because this page does not have a background image at the top, we need to change the nav bar
-        so that the navigation items are visible on a white background.  We do this by swaping out
-        the CSS class navbar-dark with navbar-light. The following JavaScript swaps the nav bar CSS
-        clases after the page is fully loaded.
-     -->
-    <script>
-        window.addEventListener('load', (event) => {
-            // Find the first nav bar (should be in header).
-            var navBar = document.querySelector('nav');
-            navBar.classList.remove("navbar-dark"); // Remove the class that is part of the layout
-            navBar.classList.add("navbar-light"); // Add this class because there is no background image
-        });
-    </script>
-    </script>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mt-4 mb-4 text-center" contenteditable="true">

@@ -17,11 +17,11 @@
     <!--Header-Begin-->
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-block" style="z-index: 2000;">
             <div class="container-fluid">
                 <!-- Navbar brand -->
                 <a class="navbar-brand nav-link" target="_blank" href="https://github.com/CosmosSoftware/Cosmos.Cms">
-                    <strong>Cosmos</strong>
+                    <strong>Cosmos CMS</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
@@ -83,6 +83,20 @@
             }
         }
     </style>
+    <!-- 
+        Because this page has a background image at the top, we need to change the nav bar so
+        that the navigation items are visible on a the background.  We do this by swaping out
+        the CSS class navbar-dark with navbar-light.  The following JavaScript swaps the  nav 
+        bar CSS clases after the page is fully loaded.
+     -->
+    <script>
+        window.addEventListener('load', (event) => {
+            // Find the first nav bar (should be in header).
+            var navBar = document.querySelector('nav');
+            navBar.classList.remove("navbar-light"); // Remove the class that is part of the  layout
+            navBar.classList.add("navbar-dark");     // Add this because there is a background image
+        });
+    </script>
     <div id="jumbo" class="p-5 text-center bg-image"
         style="background-image: url('https://cosmossite.z19.web.core.windows.net/pub/images/stock/moon-5224745_1920.jpg');height: 50vh;">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.1);">
