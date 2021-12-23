@@ -98,7 +98,31 @@
                     "Title": "Home Page",
                     "Type": "home",
                     "Description": "Website home page for this layout.",
-                    "Path": "mdb-cfc/Pages/home.html"
+                    "Path": "ct-mk2/Pages/home.html"
+                },
+                {
+                    "Title":"About Us Page",
+                    "Type":"content",
+                    "Description":"This about us page is designed to describe a business and it's staff.",
+                    "Path": "ct-mk2/Pages/about-us.html"
+                },
+                {
+                    "Title":"About Author Page",
+                    "Type":"content",
+                    "Description":"This page highlights an author or can be used for a person's biography.",
+                    "Path": "ct-mk2/Pages/author.html"
+                },
+                {
+                    "Title":"Contact Us Page",
+                    "Type":"content",
+                    "Description":"This is an example contact us form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
+                    "Path": "ct-mk2/Pages/contact-us.html"
+                },
+                {
+                    "Title":"Sign-in Page",
+                    "Type":"content",
+                    "Description":"An example sign in page. A developer would need to implement this design with the authentication back-end that is based on ASP.NET Core Razor pages.",
+                    "Path": "ct-mk2/Pages/sign-in.html"
                 },
                 {
                     "Title": "Single Column Page",
