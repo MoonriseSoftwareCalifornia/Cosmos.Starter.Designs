@@ -1,0 +1,58 @@
+{
+    "Pages": [
+        {
+            "Title": "Home Page",
+            "Type": "home",
+            "Description": "Website home page for this layout.",
+            "Path": "sb-cb/Pages/home.html"
+        },
+        {
+            "Title": "About Blogger Page",
+            "Type": "content",
+            "Description": "This about us page is designed to describe a business and it's staff.",
+            "Path": "sb-cb/Pages/about.html"
+        },
+        {
+            "Title": "Contact Blogger Page",
+            "Type": "content",
+            "Description": "This is an example contact blogger form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
+            "Path": "ct-mk2/Pages/contact.html"
+        },
+        {
+            "Title": "Blog Post Page",
+            "Type": "content",
+            "Description": "This page highlights an author or can be used for a person's biography.",
+            "Path": "sb-cb/Pages/post.html"
+        },
+        {
+            "Title": "Single Column Page",
+            "Type": "content",
+            "Description": "Basic single column page.",
+            "Path": "mdb-cfc/Pages/SingleColumn.html"
+        },
+        {
+            "Title": "Single Column Page w/TOC",
+            "Type": "content",
+            "Description": "Single column page with table of contents (TOC) in left side column.",
+            "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
+        },
+        {
+            "Title": "Single Column Page w/TOC and Jumbotron",
+            "Type": "content",
+            "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
+            "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
+        },
+        {
+            "Title": "Two Column Page",
+            "Type": "content",
+            "Description": "Two column page with title block at top.",
+            "Path": "mdb-cfc/Pages/TwoColumn.html"
+        },
+        {
+            "Title": "Two Column Page w/Jumbotron",
+            "Type": "content",
+            "Description": "Two column page with title block at top and a Jumbotron.",
+            "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
+        }
+    ]
+}

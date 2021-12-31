@@ -4,219 +4,39 @@
             "Id":"mdb-cfc",
             "Name": "MD Bootstrap Carousel Full Cover",
             "Description" : "Carousel full cover starter template from <a href='https://mdbootstrap.com/freebies/carousel-full-cover/' target='_blank'>Material Design</a>.",
-            "License" : "<a href='https://mdbootstrap.com/general/license/'>MIT</a>.",
-            "Pages" : [
-                {
-                    "Title": "Home Page",
-                    "Type": "home",
-                    "Description": "Website home page for this layout.",
-                    "Path": "mdb-cfc/Pages/home.html"
-                },
-                {
-                    "Title": "Single Column Page",
-                    "Type": "content",
-                    "Description": "Basic single column page.",
-                    "Path": "mdb-cfc/Pages/SingleColumn.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column.",
-                    "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC and Jumbotron",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-                }, 
-                {
-                    "Title": "Two Column Page",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top.",
-                    "Path": "mdb-cfc/Pages/TwoColumn.html"
-                }, 
-                {
-                    "Title": "Two Column Page w/Jumbotron",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
-                }
-            ]
+            "License" : "<a href='https://mdbootstrap.com/general/license/'>MIT</a>"
         },
         {
             "Id":"mdb-dark",
             "Name": "MD Bootstrap Dark Theme",
             "Description" : "Carousel full cover starter template from <a href='https://github.com/mdbootstrap/bootstrap-5-dark-theme' target='_blank'>Material Design</a>. This includes the same template pages as the light layout theme by MDB.",
-            "License" : "<a href='https://mdbootstrap.com/general/license/'>MIT</a>.",
-            "Pages" : [
-                {
-                    "Title": "Home Page",
-                    "Type": "home",
-                    "Description": "Website home page for this layout.",
-                    "Path": "mdb-cfc/Pages/home.html"
-                },
-                {
-                    "Title": "Single Column Page",
-                    "Type": "content",
-                    "Description": "Basic single column page.",
-                    "Path": "mdb-cfc/Pages/SingleColumn.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column.",
-                    "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC and Jumbotron",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-                }, 
-                {
-                    "Title": "Two Column Page",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top.",
-                    "Path": "mdb-cfc/Pages/TwoColumn.html"
-                }, 
-                {
-                    "Title": "Two Column Page w/Jumbotron",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
-                }
-            ]
+            "License" : "<a href='https://mdbootstrap.com/general/license/'>MIT</a>"
         },
         {
             "Id":"ct-mk2",
             "Name":"Creative Tim Material Kit 2",
-            "Description":"",
-            "License":"",
-            "Pages" : [
-                {
-                    "Title": "Home Page",
-                    "Type": "home",
-                    "Description": "Website home page for this layout.",
-                    "Path": "ct-mk2/Pages/home.html"
-                },
-                {
-                    "Title":"About Us Page",
-                    "Type":"content",
-                    "Description":"This about us page is designed to describe a business and it's staff.",
-                    "Path": "ct-mk2/Pages/about-us.html"
-                },
-                {
-                    "Title":"About Author Page",
-                    "Type":"content",
-                    "Description":"This page highlights an author or can be used for a person's biography.",
-                    "Path": "ct-mk2/Pages/author.html"
-                },
-                {
-                    "Title":"Contact Us Page",
-                    "Type":"content",
-                    "Description":"This is an example contact us form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
-                    "Path": "ct-mk2/Pages/contact-us.html"
-                },
-                {
-                    "Title":"Sign-in Page",
-                    "Type":"content",
-                    "Description":"An example sign in page. A developer would need to implement this design with the authentication back-end that is based on ASP.NET Core Razor pages.",
-                    "Path": "ct-mk2/Pages/sign-in.html"
-                },
-                {
-                    "Title": "Single Column Page",
-                    "Type": "content",
-                    "Description": "Basic single column page.",
-                    "Path": "mdb-cfc/Pages/SingleColumn.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column.",
-                    "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC and Jumbotron",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-                }, 
-                {
-                    "Title": "Two Column Page",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top.",
-                    "Path": "mdb-cfc/Pages/TwoColumn.html"
-                }, 
-                {
-                    "Title": "Two Column Page w/Jumbotron",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
-                }
-            ]
+            "Description":"The most complex and innovative UI Kit Made by <a href='https://www.creative-tim.com/'>Creative Tim</a>. This is a Freebie Bootstrap 5 UI Kit with a fresh, new design inspired by Google's Material Design 2.",
+            "License":"<a href='https://github.com/timcreative/freebies/blob/master/LICENSE.md'>MIT</a>"
         },
         {
             "Id":"sb-cb",
             "Name":"Clean Blog Layout",
             "Description":"Clean Blog is a stylish, responsive blog theme for Bootstrap created by <a href='https://github.com/StartBootstrap/startbootstrap-clean-blog/'>Start Bootstrap </a>.",
-            "License":"<a href='https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE'>MIT</a>.",
-            "Pages" : [
-                {
-                    "Title": "Home Page",
-                    "Type": "home",
-                    "Description": "Website home page for this layout.",
-                    "Path": "sb-cb/Pages/home.html"
-                },
-                {
-                    "Title":"About Blogger Page",
-                    "Type":"content",
-                    "Description":"This about us page is designed to describe a business and it's staff.",
-                    "Path": "sb-cb/Pages/about.html"
-                },
-                {
-                    "Title":"Contact Blogger Page",
-                    "Type":"content",
-                    "Description":"This is an example contact blogger form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
-                    "Path": "ct-mk2/Pages/contact.html"
-                },
-                {
-                    "Title":"Blog Post Page",
-                    "Type":"content",
-                    "Description":"This page highlights an author or can be used for a person's biography.",
-                    "Path": "sb-cb/Pages/post.html"
-                },
-                {
-                    "Title": "Single Column Page",
-                    "Type": "content",
-                    "Description": "Basic single column page.",
-                    "Path": "mdb-cfc/Pages/SingleColumn.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column.",
-                    "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-                }, 
-                {
-                    "Title": "Single Column Page w/TOC and Jumbotron",
-                    "Type": "content",
-                    "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-                }, 
-                {
-                    "Title": "Two Column Page",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top.",
-                    "Path": "mdb-cfc/Pages/TwoColumn.html"
-                }, 
-                {
-                    "Title": "Two Column Page w/Jumbotron",
-                    "Type": "content",
-                    "Description": "Two column page with title block at top and a Jumbotron.",
-                    "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
-                }
-            ]
+            "License":"<a href='https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE'>MIT</a>"            
+        },
+        {
+            
+            "Id":"tm-dev",
+            "Name":"Bootstrap 5 by Traversy Media",
+            "Description":"An example Bootstrap 5 template built as part of a tutorial by <a href='https://traversymedia.com/'>Traversy Media</a> that is on <a href='https://www.youtube.com/watch?v=4sosXZsdy-s'>YouTube</a>.",
+            "License":""
+        },
+        {
+            
+            "Id":"bs5-strt",
+            "Name":"Official Bootstrapt 5 Starter Templage",
+            "Description":"Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.",
+            "License":"<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         }
     ]
 }
