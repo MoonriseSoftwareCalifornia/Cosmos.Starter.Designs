@@ -4,7 +4,7 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "sb-cb/Pages/home.html"
+            "Path": "tm-dev/Pages/home.html"
         },
         {
             "Title": "About Blogger Page",
