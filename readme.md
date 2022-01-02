@@ -1,6 +1,8 @@
-# Vanilla JavaScript App
+# Open Source Layouts for Cosmos CMS
 
+This repository is a collection of open source starter layouts that have been fitted for [Cosmos CMS](https://cosmos.moonrise.net).
+Fork this repository if you would like to contribute your layout to this collection.
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build JavaScript apps in minutes. Use this repo with the [quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to build and customize a new static site.
+Here is a list of layouts currently provided here:
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+![Bootstrap 5 Preview]

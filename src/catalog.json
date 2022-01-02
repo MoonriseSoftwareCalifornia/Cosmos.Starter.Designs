@@ -1,6 +1,12 @@
 {
     "LayoutCatalog": [
         {
+            "Id":"bs5-strt",
+            "Name":"Official Bootstrapt 5 Starter Templage",
+            "Description":"Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.",
+            "License":"<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
+        },
+        {
             "Id":"mdb-cfc",
             "Name": "MD Bootstrap Carousel Full Cover",
             "Description" : "Carousel full cover starter template from <a href='https://mdbootstrap.com/freebies/carousel-full-cover/' target='_blank'>Material Design</a>.",
@@ -30,13 +36,6 @@
             "Name":"Bootstrap 5 by Traversy Media",
             "Description":"An example Bootstrap 5 template built as part of a tutorial by <a href='https://traversymedia.com/'>Traversy Media</a> that is on <a href='https://www.youtube.com/watch?v=4sosXZsdy-s'>YouTube</a>.",
             "License":""
-        },
-        {
-            
-            "Id":"bs5-strt",
-            "Name":"Official Bootstrapt 5 Starter Templage",
-            "Description":"Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.",
-            "License":"<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         }
     ]
 }
