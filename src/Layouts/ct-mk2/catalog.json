@@ -23,42 +23,6 @@
             "Type":"content",
             "Description":"This is an example contact us form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
             "Path": "ct-mk2/Pages/contact-us.html"
-        },
-        {
-            "Title":"Sign-in Page",
-            "Type":"content",
-            "Description":"An example sign in page. A developer would need to implement this design with the authentication back-end that is based on ASP.NET Core Razor pages.",
-            "Path": "ct-mk2/Pages/sign-in.html"
-        },
-        {
-            "Title": "Single Column Page",
-            "Type": "content",
-            "Description": "Basic single column page.",
-            "Path": "mdb-cfc/Pages/SingleColumn.html"
-        }, 
-        {
-            "Title": "Single Column Page w/TOC",
-            "Type": "content",
-            "Description": "Single column page with table of contents (TOC) in left side column.",
-            "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-        }, 
-        {
-            "Title": "Single Column Page w/TOC and Jumbotron",
-            "Type": "content",
-            "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-            "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-        }, 
-        {
-            "Title": "Two Column Page",
-            "Type": "content",
-            "Description": "Two column page with title block at top.",
-            "Path": "mdb-cfc/Pages/TwoColumn.html"
-        }, 
-        {
-            "Title": "Two Column Page w/Jumbotron",
-            "Type": "content",
-            "Description": "Two column page with title block at top and a Jumbotron.",
-            "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
         }
     ]
 }
