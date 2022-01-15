@@ -4,37 +4,7 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "mdb-cfc/Pages/home.html"
-        },
-        {
-            "Title": "Single Column Page",
-            "Type": "content",
-            "Description": "Basic single column page.",
-            "Path": "mdb-cfc/Pages/SingleColumn.html"
-        }, 
-        {
-            "Title": "Single Column Page w/TOC",
-            "Type": "content",
-            "Description": "Single column page with table of contents (TOC) in left side column.",
-            "Path": "mdb-cfc/Pages/SingleColumnWithTOC.html"
-        }, 
-        {
-            "Title": "Single Column Page w/TOC and Jumbotron",
-            "Type": "content",
-            "Description": "Single column page with table of contents (TOC) in left side column and a Jumbotron.",
-            "Path": "mdb-cfc/Pages/SingleColumnJumbotronWithTOC.html"
-        }, 
-        {
-            "Title": "Two Column Page",
-            "Type": "content",
-            "Description": "Two column page with title block at top.",
-            "Path": "mdb-cfc/Pages/TwoColumn.html"
-        }, 
-        {
-            "Title": "Two Column Page w/Jumbotron",
-            "Type": "content",
-            "Description": "Two column page with title block at top and a Jumbotron.",
-            "Path": "mdb-cfc/Pages/TwoColumnJumbotron.html"
+            "Path": "bs5-strt/Pages/home.html"
         }
     ]
 }
