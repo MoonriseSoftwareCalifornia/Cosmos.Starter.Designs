@@ -18,7 +18,8 @@ Thank you for contributing!  You're help is very much appreciated!
 
 Here is how to add your layout to the collective:
 
-  * "Fork" this repository.
+  * This repository is an Azure Static website built with Visual Studio Code with the [Static Website plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps). You may want to install this before continuing.
+  * "Fork" [this repository](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts).
   * Notice within the "src" folder you will see a folder called "Layouts."  This is where the community layouts are placed.
   * Create a new folder here for your own.  Keep the folder name short.
   * Take a look at the file located in "[Layouts/Blank/layout.html](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/layout.html)".  This is an example layout that is "blank." Within it are notes and comments that can help you create a new layout.
