@@ -12,4 +12,19 @@ Here is a list of layouts currently provided here:
 * [MD Bootstrap Carousel Full Cover](https://cosmos-layouts.moonrise.net/Layouts/mdb-cfc/layout.html) Author: [MD Bootstrap](https://mdbootstrap.com/freebies/carousel-full-cover/) License:[MIT](https://mdbootstrap.com/general/license/)
 * [MD Bootstrap Dark Theme](https://cosmos-layouts.moonrise.net/Layouts/mdb-dark/layout.html) Author: [MD Bootstrap](https://github.com/mdbootstrap/bootstrap-5-dark-theme) License:[MIT](https://mdbootstrap.com/general/license/)
 
-Fork this repository if you would like to contribute a layout to this collection. Thank you!
+# How to Add Your Layout
+
+Thank you for contributing!  You're help is very much appreciated!
+
+Here is how to add your layout to the collective:
+
+  * "Fork" this repository.
+  * Notice within the "src" folder you will see a folder called "Layouts."  This is where the community layouts are placed.
+  * Create a new folder here for your own.  Keep the folder name short.
+  * Take a look at the file located in "Layouts/Blank/layout.html".  This is an example layout that is "blank." Within it are notes and comments that can help you create a new layout.
+  * Now you want to add your layout to [the catalog](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/catalog.json).
+  * Once you have a layout ready to contribute, create a "pull request."
+
+Once the pull request is accepted and code is merged, your layout will be added to the others. When people install Cosmos CMS, they may be using your layout!
+
+If you have questions, please email: mars@moonrise.net.
