@@ -23,6 +23,7 @@ Here is how to add your layout to the collective:
   * Create a new folder here for your own.  Keep the folder name short.
   * Take a look at the file located in "[Layouts/Blank/layout.html](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/layout.html)".  This is an example layout that is "blank." Within it are notes and comments that can help you create a new layout.
   * Now you want to add your layout to [the catalog](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/catalog.json).
+  * Finally, create the catalog.json file in your new folder.  This file points to example pages for your layout. See [the example](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/catalog.json) in the blank layout.
   * Once you have a layout ready to contribute, create a "pull request."
 
 Once the pull request is accepted and code is merged, your layout will be added to the others. When people install Cosmos CMS, they may be using your layout!
