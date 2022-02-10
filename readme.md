@@ -21,7 +21,7 @@ Here is how to add your layout to the collective:
   * "Fork" this repository.
   * Notice within the "src" folder you will see a folder called "Layouts."  This is where the community layouts are placed.
   * Create a new folder here for your own.  Keep the folder name short.
-  * Take a look at the file located in "Layouts/Blank/layout.html".  This is an example layout that is "blank." Within it are notes and comments that can help you create a new layout.
+  * Take a look at the file located in "[Layouts/Blank/layout.html](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/layout.html)".  This is an example layout that is "blank." Within it are notes and comments that can help you create a new layout.
   * Now you want to add your layout to [the catalog](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/catalog.json).
   * Once you have a layout ready to contribute, create a "pull request."
 
