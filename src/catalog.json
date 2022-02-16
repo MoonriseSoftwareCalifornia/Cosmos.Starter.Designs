@@ -13,6 +13,12 @@
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
+            "Id": "ca-ds",
+            "Name": "State of California Design System (beta)",
+            "Description": "<a href='https://designsystem.webstandards.ca.gov/'>The Design System</a> makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.",
+            "License": "<a href='https://github.com/cagov/design-system/blob/main/LICENSE'>MIT</a>"
+        },
+        {
             "Id": "mdb-cfc",
             "Name": "Material Design for Bootstrap 5 by MDB",
             "Description": "Carousel full cover starter template from <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/' target='_blank'>Material Design</a>. Documentation for how to use this theme can be found at <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/'>GitHub</a>.",

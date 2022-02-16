@@ -1,0 +1,10 @@
+{
+    "Pages" : [
+        {
+            "Title": "Home Page",
+            "Type": "home",
+            "Description": "Example home page for this layout.",
+            "Path": "blank/Pages/home.html"
+        }
+    ]
+}
