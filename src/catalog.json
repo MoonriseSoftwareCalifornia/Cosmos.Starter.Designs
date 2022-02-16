@@ -7,6 +7,12 @@
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
+            "Id": "ca-ds",
+            "Name": "California Design System",
+            "Description": "The Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.",
+            "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
+        },
+        {
             "Id": "bs5-strt",
             "Name": "Bootstrapt 5 Starter (OFFICIAL)",
             "Description": "Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started. Complete documentation on how to use <a href='https://getbootstrap.com/'>Bootstrap</a> can be found on the <a href='https://getbootstrap.com/'>project website</a>.",
