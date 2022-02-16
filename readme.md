@@ -5,6 +5,7 @@ Each layout is packaged to be easily imported into your Cosmos website.
 
 Here is a list of layouts currently provided here:
 
+* [California Design System](https://cosmos-layouts.moonrise.net/Layouts/ca-ds/layout.html) Author: [California Office of Digital Innovation](https://designsystem.webstandards.ca.gov/)
 * [Bootstrap 5 Starter](https://cosmos-layouts.moonrise.net/Layouts/bs5-strt/layout.html) Author: [Bootstrap Team](https://getbootstrap.com/docs/5.0/examples/starter-template/) License: [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE)
 * [Bootstrap 5 by Traversy Media](https://cosmos-layouts.moonrise.net/Layouts/tm-dev/layout.html) with [YouTube Tutorial](https://youtu.be/4sosXZsdy-s) Author: [Traversy Media](https://traversymedia.com/) 
 * [Clean Blog Layout](https://cosmos-layouts.moonrise.net/Layouts/sb-cb/layout.html) Author: [Start Bootstrap](https://github.com/StartBootstrap/startbootstrap-clean-blog/) License: [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)

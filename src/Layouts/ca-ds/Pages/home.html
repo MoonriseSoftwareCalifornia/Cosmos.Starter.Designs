@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>California Design System | Template</title>
+	<meta charset="utf-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<meta name="author" content="State of California">
+	<meta name="description"
+		content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.">
+	<meta name="keywords" content="California, government, design system">
+	<link rel="canonical" href="https://designsystem.webstandards.ca.gov/">
+	<meta property="og:url" content="https://designsystem.webstandards.ca.gov/">
+	<meta property="og:description"
+		content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.">
+	<meta property="og:title" content="California Design System | California Design System">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://designsystem.webstandards.ca.gov/img/thumbnail.png">
+	<meta property="og:image:width" content="500">
+	<meta property="og:image:height" content="500">
+	<meta property="og:image:alt" content="California Design System">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="California Design System">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="California Design System | California Design System">
+	<meta name="twitter:image" content="https://designsystem.webstandards.ca.gov/img/thumbnail.png">
+	<meta name="twitter:image:width" content="500">
+	<meta name="twitter:image:height" content="500">
+	<meta property="twitter:image:alt" content="California Design System">
+	<link title="fav icon" rel="icon" href="/img/favicon.ico">
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<link rel="preconnect" href="https://www.google-analytics.com/">
+
+	<!-- The CA Design System CDN CSS -->
+
+	<link href="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/dist/cagov.css" rel="stylesheet">
+
+	<!--
+        'Layouts' with Cosmos CMS are used to set visual and functional
+        consistency across all web pages on your website.
+
+        What goes in a layout are those things that *all* web pages in your
+        website will need.
+
+        For example links to CSS files, JavaScript, Google Analytics code, meta tags.
+
+        Please note:
+            * The "Title" tag within the <head></head> tags is injected by Cosmos CMS. 
+              Therefore do not add it.
+            * Make sure the layout only contains the resources you want to appear on
+              every page.
+            * Page specific code is injected by Cosmos CMS automatically below.
+    -->
+	<!-- ADD LAYOUT HEAD CONTENT HERE -->
+
+
+	<!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+
+	<cosmos-layout-header>
+		<!-- Put your layout header code here -->
+
+
+		<header class="header-container">
+			<div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
+
+			<!--statewide-header-->
+			<div class="official-header">
+				<div class="container">
+					<div class="official-logo">
+						<a href="https://ca.gov" title="ca.gov logo" target="_blank">
+							<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33px" height="24px"
+								viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
+								<path class="ca"
+									d="M27.4,14c0.1-0.4,0.4-1.5,0.9-3.2c0.1-0.5,0.4-1.3,0.9-2.7c0.5-1.4,0.9-2.5,1.2-3.3c-0.9,0.6-1.8,1.4-2.7,2.3
+                      c-3.2,3.5-6.9,7.6-8.3,9.8c0.5-0.1,1.5-1.2,4.7-2.3C26.3,14,27.4,14,27.4,14L27.4,14z M26.9,16.2c-10.1,0-14.5,16.1-21.6,16.1
+                      c-1.6,0-2.8-0.7-3.7-2.1c-0.6-0.9-0.8-2-0.8-3.1c0-2.9,1.4-6.7,4.2-11.1c2.4-3.8,4.9-6.9,7.5-9.2c2.3-2,4.2-3,5.9-3
+                      c0.9,0,1.6,0.3,2.1,1C20.8,5.2,21,5.8,21,6.5c0,1.3-0.4,2.8-1.3,4.5c-0.8,1.5-1.7,2.8-2.9,3.9c-0.8,0.8-1.4,1.1-1.8,1.1
+                      c-0.3,0-0.6-0.1-0.8-0.4c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.5,0.4-1,1.2-1.6c1.2-0.9,2.1-1.8,2.8-2.9c1-1.5,1.5-2.8,1.5-3.8
+                      c0-0.4-0.1-0.7-0.3-0.9c-0.2-0.2-0.5-0.3-0.8-0.3c-0.7,0-1.8,0.5-3.2,1.6c-1.6,1.2-3.2,2.9-5,5C8,14.8,6.3,17.4,5.2,20
+                      c-1.2,2.7-1.8,5-1.8,6.9c0,0.9,0.3,1.7,0.8,2.3c0.6,0.7,1.3,1.1,2.1,1.1c3.2-0.1,7.2-7.4,8.4-9.1C27,4.3,27.9,4.3,29.8,2.5
+                      c1.1-1,1.9-1.6,2.5-1.6c0.4,0,0.7,0.1,0.9,0.4c0.2,0.3,0.3,0.5,0.3,0.9c0,0.4-0.2,1-0.6,2c-0.7,1.7-1.3,3.5-1.9,5.4
+                      c-0.5,1.7-0.9,3-1,3.9c0.2,0,0.4,0,0.5,0c0.4,0,0.7,0,1,0c0.8,0,1.2,0.3,1.2,0.9c0,0.3-0.1,0.5-0.3,0.8c-0.2,0.3-0.4,0.4-0.6,0.5
+                      c-0.1,0-0.3,0-0.7,0c-0.8,0-1.4,0-1.7,0.1c-0.1,0.4-0.5,4.1-1.1,4.2C26.7,21.5,26.8,16.7,26.9,16.2L26.9,16.2z" />
+								<g>
+									<path class="gov"
+										d="M16.8,27.2c0.4,0,0.8,0.2,1.1,0.5c0.3,0.3,0.5,0.7,0.5,1.1c0,0.4-0.2,0.8-0.5,1.1c-0.3,0.3-0.7,0.5-1.1,0.5
+                          c-0.4,0-0.8-0.2-1.1-0.5c-0.3-0.3-0.5-0.7-0.5-1.1c0-0.4,0.2-0.8,0.5-1.1C16,27.4,16.4,27.2,16.8,27.2L16.8,27.2z" />
+									<path class="gov" d="M26.7,22.9l-1.1,1.1c-0.7-0.8-1.5-1.1-2.5-1.1c-0.8,0-1.5,0.3-2.1,0.8c-0.6,0.6-0.8,1.2-0.8,2
+                          c0,0.8,0.3,1.5,0.9,2.1c0.6,0.6,1.3,0.8,2.2,0.8c0.6,0,1-0.1,1.4-0.3c0.4-0.2,0.7-0.6,0.9-1.1h-2.4v-1.5h4.2l0,0.4
+                          c0,0.7-0.2,1.4-0.6,2.1c-0.4,0.7-0.9,1.2-1.5,1.5c-0.6,0.3-1.3,0.5-2.1,0.5c-0.9,0-1.7-0.2-2.3-0.6c-0.7-0.4-1.2-0.9-1.6-1.6
+                          c-0.4-0.7-0.6-1.5-0.6-2.3c0-1.1,0.4-2.1,1.1-2.9c0.9-1,2-1.5,3.4-1.5c0.7,0,1.4,0.1,2.1,0.4C25.7,22,26.2,22.4,26.7,22.9
+                          L26.7,22.9z" />
+									<path class="gov"
+										d="M32.2,21.4c1.2,0,2.2,0.4,3.1,1.3c0.9,0.9,1.3,1.9,1.3,3.2c0,1.2-0.4,2.3-1.3,3.1c-0.8,0.9-1.9,1.3-3.1,1.3
+                          c-1.3,0-2.3-0.4-3.2-1.3c-0.8-0.9-1.3-1.9-1.3-3.1c0-0.8,0.2-1.5,0.6-2.2c0.4-0.7,0.9-1.2,1.6-1.6C30.7,21.5,31.4,21.4,32.2,21.4
+                          L32.2,21.4z M32.2,22.9c-0.8,0-1.4,0.3-2,0.8c-0.5,0.5-0.8,1.2-0.8,2.1c0,0.9,0.3,1.7,1,2.2c0.5,0.4,1.1,0.6,1.8,0.6
+                          c0.8,0,1.4-0.3,1.9-0.8c0.5-0.6,0.8-1.2,0.8-2c0-0.8-0.3-1.5-0.8-2C33.6,23.2,33,22.9,32.2,22.9L32.2,22.9z" />
+									<polygon class="gov"
+										points="36.3,21.6 38,21.6 40.1,27.6 42.2,21.6 43.9,21.6 40.8,30 39.3,30 36.3,21.6 	" />
+								</g>
+							</svg>
+						</a>
+
+						<p class="official-tag">
+							<span class="desktop-only">Official website of the</span> State of
+							California
+						</p>
+					</div>
+					<div class="official-languages font-size-sm">
+						<a href="#">Sign in</a>
+						<a href="#">Settings</a>
+					</div>
+				</div>
+			</div>
+			<!--end sitewide-header-->
+
+			<!--site-header without logo-->
+			<div class="site-header full-bleed">
+				<div class="container">
+
+					<a class="grid-org-name" href="/">
+						<span class="org-name-state">
+							State of California
+						</span>
+
+						<span class="org-name-dept">
+							Design System <sup class="font-size-sm">BETA</sup>
+						</span>
+					</a>
+
+					<div class="cagov-nav mobile-icons grid-mobile-icons">
+						<div class="cagov-nav mobile-search">
+							<button class="search-btn" aria-expanded="true">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+									y="0px" width="17px" height="17px" viewBox="0 0 17 17"
+									style="enable-background:new 0 0 17 17;" xml:space="preserve">
+									<path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
+        c1.3,1.3,3,2,4.8,2c1.4,0,2.9-0.5,4.1-1.4l4.1,4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C16.7,16.2,16.7,15.6,16.4,15.2
+        L16.4,15.2z M7,12c-1.3,0-2.6-0.5-3.5-1.4c-1.9-1.9-1.9-5.1,0-7C4.4,2.7,5.6,2.1,7,2.1s2.6,0.5,3.5,1.4c0.9,0.9,1.4,2.2,1.4,3.5
+        c0,1.3-0.5,2.6-1.4,3.5C9.5,11.5,8.3,12,7,12z"></path>
+								</svg>
+								<span>Search</span>
+							</button>
+						</div>
+						<button class="menu-trigger cagov-nav open-menu" aria-label="Navigation menu" aria-haspopup="true"
+							aria-expanded="false" aria-owns="mainMenu" aria-controls="mainMenu">
+							<div class="cagov-nav hamburger">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+							<div class="cagov-nav menu-trigger-label menu-label" data-openlabel="Menu" data-closelabel="Close">
+								Menu</div>
+						</button>
+					</div>
+
+					<div class="search-container grid-search">
+
+						<form class="site-search">
+							<span class="sr-only" id="SearchInput">Custom Google Search</span>
+							<input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Search this website"
+								class="search-textfield">
+							<button type="submit" class="search-submit">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+									y="0px" width="17px" height="17px" viewBox="0 0 17 17"
+									style="enable-background:new 0 0 17 17;" xml:space="preserve">
+									<path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
+          c1.3,1.3,3,2,4.8,2c1.4,0,2.9-0.5,4.1-1.4l4.1,4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C16.7,16.2,16.7,15.6,16.4,15.2
+          L16.4,15.2z M7,12c-1.3,0-2.6-0.5-3.5-1.4c-1.9-1.9-1.9-5.1,0-7C4.4,2.7,5.6,2.1,7,2.1s2.6,0.5,3.5,1.4c0.9,0.9,1.4,2.2,1.4,3.5
+          c0,1.3-0.5,2.6-1.4,3.5C9.5,11.5,8.3,12,7,12z" />
+								</svg>
+								<span class="sr-only">Submit</span>
+							</button>
+							<button class="search-close">Close</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--end site-header-->
+
+
+			<!--site-navigation-->
+			<cagov-site-navigation>
+				<div class="container">
+					<div class="search-container search-container--small hidden-search">
+						<form class="site-search">
+							<span class="sr-only" id="SearchInput2">Custom Google Search</span>
+							<input type="text" name="q" aria-labelledby="SearchInput2" placeholder="Search this website"
+								class="search-textfield">
+							<button type="submit" class="search-submit">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+									y="0px" width="17px" height="17px" viewBox="0 0 17 17"
+									style="enable-background:new 0 0 17 17;" xml:space="preserve">
+									<path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
+                      c1.3,1.3,3,2,4.8,2c1.4,0,2.9-0.5,4.1-1.4l4.1,4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C16.7,16.2,16.7,15.6,16.4,15.2
+                      L16.4,15.2z M7,12c-1.3,0-2.6-0.5-3.5-1.4c-1.9-1.9-1.9-5.1,0-7C4.4,2.7,5.6,2.1,7,2.1s2.6,0.5,3.5,1.4c0.9,0.9,1.4,2.2,1.4,3.5
+                      c0,1.3-0.5,2.6-1.4,3.5C9.5,11.5,8.3,12,7,12z" />
+								</svg>
+								<span class="sr-only">Submit</span>
+							</button>
+						</form>
+					</div>
+					<nav class="expanded-menu" role="navigation" aria-label="Site Navigation" aria-hidden="false"
+						id="main-menu">
+						<div class="expanded-menu-grid">
+							<div class="expanded-menu-section mobile-only">
+								<strong class="expanded-menu-section-header">
+									<a class="expanded-menu-section-header-link js-event-hm-menu" href="/">Home</a>
+								</strong>
+							</div>
+							<div class="expanded-menu-col js-cagov-navoverlay-expandable">
+								<div class="expanded-menu-section">
+									<strong class="expanded-menu-section-header"><a
+											class="expanded-menu-section-header-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/get-started/">Get
+											started</a></strong>
+								</div>
+							</div>
+
+							<div class="expanded-menu-col js-cagov-navoverlay-expandable">
+								<div class="expanded-menu-section">
+									<strong class="expanded-menu-section-header"><a
+											class="expanded-menu-section-header-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/principles/">Principles</a></strong>
+								</div>
+							</div>
+
+							<div class="expanded-menu-col js-cagov-navoverlay-expandable">
+								<div class="expanded-menu-section">
+									<strong class="expanded-menu-section-header">
+										<button class="expanded-menu-section-header-link js-event-hm-menu">
+											<span>
+												Style guides
+											</span>
+											<span class="expanded-menu-section-header-arrow" aria-hidden="true">
+												<svg width="11" height="7" class="expanded-menu-section-header-arrow-svg"
+													viewBox="0 0 11 7" fill="#004ABC" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z" />
+												</svg>
+											</span>
+										</button>
+									</strong>
+									<div class="expanded-menu-dropdown">
+										<a class="expanded-menu-dropdown-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/style/content/" tabindex="-1">Content
+											style guide</a>
+										<a class="expanded-menu-dropdown-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/style/design/" tabindex="-1">Design
+											style guide</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="expanded-menu-col js-cagov-navoverlay-expandable">
+								<div class="expanded-menu-section">
+									<strong class="expanded-menu-section-header"><a
+											class="expanded-menu-section-header-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/components/">Components</a></strong>
+								</div>
+							</div>
+
+							<div class="expanded-menu-col js-cagov-navoverlay-expandable">
+								<div class="expanded-menu-section">
+									<strong class="expanded-menu-section-header"><a
+											class="expanded-menu-section-header-link js-event-hm-menu"
+											href="https://designsystem.webstandards.ca.gov/about/">About</a></strong>
+								</div>
+							</div>
+
+						</div>
+					</nav>
+				</div>
+			</cagov-site-navigation>
+			<!--end site-navigation-->
+
+
+		</header>
+
+
+	</cosmos-layout-header>
+
+	<!--
+      
+               This is where your page specific content will get injected by Cosmos CMS.
+      
+               It is a good idea to provide example content here so when people preview
+               your template, they can visualize what it will look like.
+      
+               TIP! Put compelling example content here to show people how great your layout is!
+      
+          -->
+
+	<div id="page-container" class="page-container-ds m-b-0">
+		<div class="main-content-ds single-column landing" id="main-content">
+			<div class="ds-content-layout">
+				<main class="main-primary" id="body-content">
+
+					<div
+						class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
+						<div>
+							<div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
+								<h1 class="h2">Meet the California Design System</h1>
+								<div class="cagov-hero-body-content p-y-4">
+									<p class="m-b-3">
+										The Design System makes it easy for state digital teams to build accessible,
+										consistent, and performant services and products to meet Californians’ needs.
+									</p>
+
+									<a class="btn-primary-outline"
+										href="https://designsystem.webstandards.ca.gov/get-started/">Learn more</a>
+
+								</div>
+							</div>
+							<div class="p-y-4">
+								<img loading="lazy" class="cagov-featured-image"
+									src="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/img/hero-bear-nature.svg"
+									alt="California  Design System displaying golden bear" width="1024" height="683" />
+							</div>
+						</div>
+					</div>
+
+					<h2>Get started</h2>
+
+					<div class="card-grid-3">
+						<a href="https://designsystem.webstandards.ca.gov/get-started/" class="no-deco cagov-card">
+							<span class="card-text">Get started</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+						<a href="https://designsystem.webstandards.ca.gov/principles/" class="no-deco cagov-card">
+							<span class="card-text">Principles</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+						<a href="https://designsystem.webstandards.ca.gov/style/content/" class="no-deco cagov-card">
+							<span class="card-text">Content style guide</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+						<a href="https://designsystem.webstandards.ca.gov/style/design/" class="no-deco cagov-card">
+							<span class="card-text">Design style guide</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+						<a href="https://designsystem.webstandards.ca.gov/components/" class="no-deco cagov-card">
+							<span class="card-text">Components</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+						<a href="https://designsystem.webstandards.ca.gov/about/" class="no-deco cagov-card">
+							<span class="card-text">About</span>
+							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+								height="24px" viewBox="0 0 24 24" width="24px">
+								<g>
+									<path d="M0,0h24v24H0V0z" fill="none" />
+								</g>
+								<g>
+									<polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+								</g>
+							</svg>
+						</a>
+					</div>
+
+					<!--highlight section -->
+					<cagov-highlight-section>
+						<article role="article" class="full-bleed p-b-2 m-t-5"
+							style="background-image:url(https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/img/bg-poly.png); background-size: cover; background-repeat:no-repeat">
+							<div class="container">
+								<header class="highlight-header">
+									<h2>Principles for people-centered digital services</h2>
+								</header>
+								<section class="highlight-body">
+									<div class="highlight-image bg-primary-lightest"><img
+											src="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/img/principles-stacked.svg"
+											alt="highlight section demo"></div>
+									<div class="highlight-text">
+										<h3>Be concise</h3>
+										<h4 class="mt-0">Principle 4</h4>
+										<p>Things are easy to use when they’re simple. Ask yourself, “Does this word,
+											image, or functionality help people do what they need to do?”</p><a
+											class="btn-primary-outline d-inline-block"
+											href="https://designsystem.webstandards.ca.gov/principles/">See all the
+											principles</a>
+									</div>
+								</section>
+							</div>
+						</article>
+					</cagov-highlight-section>
+
+
+				</main>
+			</div>
+		</div>
+	</div>
+
+
+	<!--
+      
+              The <cosmos-layout-footer></cosmos-layout-footer> tags are important.  All code
+              inbetween these tags will appear at the bottom of every page in your website.
+      
+              Notes:
+      
+                  * Put HTML footer blocks that will appear on every page.
+                  * If you have a framework that requires JavaScript libraries injected at the end
+                    of each page (bootstrap for example), put those script links here as well.
+      
+          -->
+	<cosmos-layout-footer>
+		<!--
+                  Put your layout end-of-page code here
+              -->
+
+		<!-- site footer-->
+		<section aria-label="Site footer" class="site-footer">
+			<div class="container">
+				<div class="footer-secondary-links">
+					<a href="https://designsystem.webstandards.ca.gov/contact-us/">Contact us</a>
+					<a href="https://webstandards.ca.gov/">CA Web Standards</a>
+					<a href="https://template.webstandards.ca.gov/">State Template</a>
+				</div>
+				<div class="footer-social-links">
+					<a href="https://github.com/cagov/design-system">
+						<span class="sr-only">GitHub</span>
+						<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
+							viewbox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<g>
+								<path d="M23.3,12.8c0,0.3-0.1,0.7-0.1,1c-0.2,1.5-0.7,3-1.5,4.3c-0.9,1.5-2.1,2.7-3.5,3.6c-0.8,0.5-1.6,0.9-2.4,1.2
+          c-0.5,0.2-0.8-0.1-0.8-0.6c0-1,0-2,0-2.9c0-0.6-0.1-1.2-0.4-1.7c-0.1-0.2-0.2-0.3-0.3-0.4c0.4-0.1,0.9-0.1,1.3-0.2
+          c1.1-0.3,2.2-0.8,2.9-1.8c0.5-0.7,0.7-1.6,0.9-2.5c0.1-0.7,0.1-1.4,0-2.1S19,9.4,18.5,8.9c-0.1-0.1-0.1-0.2-0.1-0.4
+          c0.3-0.9,0.2-1.8-0.2-2.7c0-0.1-0.1-0.1-0.2-0.1c-0.4-0.1-0.8,0.1-1.1,0.2C16.1,6,15.5,6.3,15,6.6c-0.1,0-0.2,0.1-0.3,0.1
+          c-1.8-0.4-3.5-0.4-5.3,0c-0.1,0-0.2,0-0.3-0.1c-0.7-0.5-1.5-0.8-2.3-1l0,0C6.2,5.5,6.1,5.5,5.9,6c-0.2,0.8-0.3,1.6,0,2.4
+          c0,0.1,0,0.2,0,0.2C5,9.7,4.7,11,4.8,12.3c0.1,0.8,0.3,1.6,0.6,2.3c0.5,1,1.4,1.6,2.4,2c0.7,0.2,1.3,0.3,2,0.5l0,0
+          c-0.4,0.4-0.5,0.8-0.6,1.3c0,0.1-0.1,0.2-0.1,0.2c-0.8,0.3-1.6,0.4-2.3,0c-0.4-0.2-0.6-0.5-0.8-0.9c-0.3-0.6-0.8-1-1.4-1.1
+          c-0.2-0.1-0.5,0-0.7,0s-0.2,0.1-0.1,0.3C3.9,17,4,17.1,4.1,17.2c0.6,0.3,0.9,0.9,1.2,1.5c0.2,0.4,0.3,0.7,0.6,1
+          c0.5,0.4,1.1,0.6,1.7,0.6c0.5,0,1,0,1.6,0c0,0,0,0,0,0.1c0,0.6,0,1.2,0,1.8c0,0.6-0.3,0.8-0.9,0.6c-2.9-1-5-2.9-6.4-5.5
+          c-1.1-2-1.4-4.1-1.1-6.4C1.1,8.5,2,6.5,3.5,4.7c1.6-1.8,3.6-3.1,6-3.6c3.5-0.7,6.7,0,9.5,2.3c2.1,1.7,3.4,3.9,4,6.6
+          c0.1,0.4,0.1,0.8,0.2,1.2c0,0.1,0,0.2,0,0.2C23.3,11.9,23.3,12.3,23.3,12.8z" />
+							</g>
+						</svg>
+					</a>
+					<a href="https://twitter.com/CaliforniaODI">
+						<span class="sr-only">Twitter</span>
+						<svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
+							viewbox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<path
+								d="M21.2,8c0,0.2,0,0.4,0,0.6c0,6-4.6,12.9-12.9,12.9c-2.6,0-4.9-0.7-7-2c0.3,0,0.7,0.1,1,0.1c2.2,0,4.1-0.7,5.7-1.9
+      c-2,0-3.6-1.4-4.2-3.1c0.3,0.1,0.6,0.1,0.9,0.1c0.4,0,0.9-0.1,1.2-0.1c-2-0.4-3.6-2.2-3.6-4.5c0,0,0,0,0-0.1c0.6,0.3,1.3,0.6,2,0.6
+      c-1.2-0.9-2-2.2-2-3.8c0-0.9,0.2-1.6,0.6-2.2c2.2,2.8,5.5,4.6,9.3,4.7C12,9,12,8.6,12,8.2c0-2.5,2-4.5,4.5-4.5
+      c1.3,0,2.5,0.6,3.3,1.4c1-0.2,2-0.6,2.9-1c-0.2,1.1-1,1.9-2,2.5c1-0.1,1.8-0.3,2.6-0.7C22.9,6.5,22.2,7.4,21.2,8L21.2,8z" />
+						</svg>
+					</a>
+					<a href="#">
+						<span class="sr-only">YouTube</span>
+						<svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
+							viewbox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<path d="M23,6.6c0,0-0.3-1.6-0.9-2.2c-0.9-0.8-1.8-0.8-2.2-0.9C16.7,3.2,12,3.2,12,3.2s-4.7,0-7.9,0.3c-0.4,0-1.4,0-2.2,0.9
+                     C1.2,5.1,1,6.6,1,6.6s-0.3,2-0.3,3.7v1.7c0,2,0.3,3.7,0.3,3.7s0.3,1.6,0.9,2.2c0.8,0.9,2,0.9,2.5,0.9c1.8,0.1,7.6,0.3,7.6,0.3
+                     s4.7,0,7.9-0.3c0.4,0,1.4,0,2.2-0.9c0.7-0.7,0.9-2.2,0.9-2.2s0.3-1.8,0.3-3.7v-1.7C23.2,8.4,23,6.6,23,6.6z M8.7,15.9V6.6l8.8,4.6
+                     L8.7,15.9L8.7,15.9z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--end site footer-->
+		<!-- statewide footer-->
+		<footer>
+			<div class="bg-light-grey">
+				<div class="container">
+					<a href="https://ca.gov" class="cagov-logo" title="ca.gov" rel="noopener noreferrer" target="_blank">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							x="0px" y="0px" width="33px" height="24px" viewBox="0 0 44 34"
+							style="enable-background:new 0 0 44 34;" xml:space="preserve">
+
+							<path class="ca"
+								d="M27.4,14c0.1-0.4,0.4-1.5,0.9-3.2c0.1-0.5,0.4-1.3,0.9-2.7c0.5-1.4,0.9-2.5,1.2-3.3c-0.9,0.6-1.8,1.4-2.7,2.3
+                c-3.2,3.5-6.9,7.6-8.3,9.8c0.5-0.1,1.5-1.2,4.7-2.3C26.3,14,27.4,14,27.4,14L27.4,14z M26.9,16.2c-10.1,0-14.5,16.1-21.6,16.1
+                c-1.6,0-2.8-0.7-3.7-2.1c-0.6-0.9-0.8-2-0.8-3.1c0-2.9,1.4-6.7,4.2-11.1c2.4-3.8,4.9-6.9,7.5-9.2c2.3-2,4.2-3,5.9-3
+                c0.9,0,1.6,0.3,2.1,1C20.8,5.2,21,5.8,21,6.5c0,1.3-0.4,2.8-1.3,4.5c-0.8,1.5-1.7,2.8-2.9,3.9c-0.8,0.8-1.4,1.1-1.8,1.1
+                c-0.3,0-0.6-0.1-0.8-0.4c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.5,0.4-1,1.2-1.6c1.2-0.9,2.1-1.8,2.8-2.9c1-1.5,1.5-2.8,1.5-3.8
+                c0-0.4-0.1-0.7-0.3-0.9c-0.2-0.2-0.5-0.3-0.8-0.3c-0.7,0-1.8,0.5-3.2,1.6c-1.6,1.2-3.2,2.9-5,5C8,14.8,6.3,17.4,5.2,20
+                c-1.2,2.7-1.8,5-1.8,6.9c0,0.9,0.3,1.7,0.8,2.3c0.6,0.7,1.3,1.1,2.1,1.1c3.2-0.1,7.2-7.4,8.4-9.1C27,4.3,27.9,4.3,29.8,2.5
+                c1.1-1,1.9-1.6,2.5-1.6c0.4,0,0.7,0.1,0.9,0.4c0.2,0.3,0.3,0.5,0.3,0.9c0,0.4-0.2,1-0.6,2c-0.7,1.7-1.3,3.5-1.9,5.4
+                c-0.5,1.7-0.9,3-1,3.9c0.2,0,0.4,0,0.5,0c0.4,0,0.7,0,1,0c0.8,0,1.2,0.3,1.2,0.9c0,0.3-0.1,0.5-0.3,0.8c-0.2,0.3-0.4,0.4-0.6,0.5
+                c-0.1,0-0.3,0-0.7,0c-0.8,0-1.4,0-1.7,0.1c-0.1,0.4-0.5,4.1-1.1,4.2C26.7,21.5,26.8,16.7,26.9,16.2L26.9,16.2z" />
+							<g>
+								<path class="gov"
+									d="M16.8,27.2c0.4,0,0.8,0.2,1.1,0.5c0.3,0.3,0.5,0.7,0.5,1.1c0,0.4-0.2,0.8-0.5,1.1c-0.3,0.3-0.7,0.5-1.1,0.5
+                    c-0.4,0-0.8-0.2-1.1-0.5c-0.3-0.3-0.5-0.7-0.5-1.1c0-0.4,0.2-0.8,0.5-1.1C16,27.4,16.4,27.2,16.8,27.2L16.8,27.2z" />
+								<path class="gov" d="M26.7,22.9l-1.1,1.1c-0.7-0.8-1.5-1.1-2.5-1.1c-0.8,0-1.5,0.3-2.1,0.8c-0.6,0.6-0.8,1.2-0.8,2
+                    c0,0.8,0.3,1.5,0.9,2.1c0.6,0.6,1.3,0.8,2.2,0.8c0.6,0,1-0.1,1.4-0.3c0.4-0.2,0.7-0.6,0.9-1.1h-2.4v-1.5h4.2l0,0.4
+                    c0,0.7-0.2,1.4-0.6,2.1c-0.4,0.7-0.9,1.2-1.5,1.5c-0.6,0.3-1.3,0.5-2.1,0.5c-0.9,0-1.7-0.2-2.3-0.6c-0.7-0.4-1.2-0.9-1.6-1.6
+                    c-0.4-0.7-0.6-1.5-0.6-2.3c0-1.1,0.4-2.1,1.1-2.9c0.9-1,2-1.5,3.4-1.5c0.7,0,1.4,0.1,2.1,0.4C25.7,22,26.2,22.4,26.7,22.9
+                    L26.7,22.9z" />
+								<path class="gov"
+									d="M32.2,21.4c1.2,0,2.2,0.4,3.1,1.3c0.9,0.9,1.3,1.9,1.3,3.2c0,1.2-0.4,2.3-1.3,3.1c-0.8,0.9-1.9,1.3-3.1,1.3
+                    c-1.3,0-2.3-0.4-3.2-1.3c-0.8-0.9-1.3-1.9-1.3-3.1c0-0.8,0.2-1.5,0.6-2.2c0.4-0.7,0.9-1.2,1.6-1.6C30.7,21.5,31.4,21.4,32.2,21.4
+                    L32.2,21.4z M32.2,22.9c-0.8,0-1.4,0.3-2,0.8c-0.5,0.5-0.8,1.2-0.8,2.1c0,0.9,0.3,1.7,1,2.2c0.5,0.4,1.1,0.6,1.8,0.6
+                    c0.8,0,1.4-0.3,1.9-0.8c0.5-0.6,0.8-1.2,0.8-2c0-0.8-0.3-1.5-0.8-2C33.6,23.2,33,22.9,32.2,22.9L32.2,22.9z" />
+								<polygon class="gov"
+									points="36.3,21.6 38,21.6 40.1,27.6 42.2,21.6 43.9,21.6 40.8,30 39.3,30 36.3,21.6 	" />
+							</g>
+						</svg>
+					</a>
+
+					<div class="footer-secondary-links">
+						<a href="https://www.ca.gov">CA.gov home</a>
+						<a href="https://www.ca.gov/use/">Conditions of use</a>
+						<a href="https://www.ca.gov/privacy-policy/">Privacy policy</a>
+						<a href="https://www.ca.gov/accessibility/">Accessibility</a>
+					</div>
+					<p class="copyright">Copyright &copy;&nbsp;
+						<script>document.write(new Date().getFullYear())</script>&nbsp;State of California
+					</p>
+				</div>
+			</div>
+			<cagov-back-to-top data-hide-after="7000" data-label="Back to top"></cagov-back-to-top>
+		</footer>
+		<!--end statewide footer-->
+		<!--JS goes here-->
+		<!-- The CA Design System JavaScript CDN -->
+		<script src="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/dist/index.js"></script>
+	</cosmos-layout-footer>
+	<!--
+      
+              Page-specific end of page content is injected here by Cosmos CMS.
+              Note, this is always after the the layout code.
+      
+          -->
+
+
+</body>
+
+</html>
