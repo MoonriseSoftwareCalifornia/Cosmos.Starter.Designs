@@ -8,7 +8,7 @@
         },
         {
             "Id": "ca-ds",
-            "Name": "California Design Sistem",
+            "Name": "California Design System",
             "Description": "The Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
