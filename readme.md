@@ -1,6 +1,6 @@
-# Open Source Layouts for Cosmos CMS
+# Open Source Layouts for Cosmos
 
-This repository is a collection of open source starter layouts that have been fitted for [Cosmos CMS](https://cosmos.moonrise.net).
+This repository is a collection of open source starter layouts that have been fitted for [Cosmos](https://github.com/CosmosSoftware/Cosmos.Cms).
 Each layout is packaged to be easily imported into your Cosmos website.
 
 Here is a list of layouts currently provided here:
