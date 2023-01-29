@@ -4,7 +4,7 @@
 			"Title": "Home Page",
 			"Type": "home",
 			"Description": "Website home page for this layout.",
-			"Path": "ca-ds/Pages/home.html"
+			"Path": "ca-ds/pages/home.html"
 		}
 	]
 }

@@ -4,25 +4,25 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "ct-mk2/Pages/home.html"
+            "Path": "ct-mk2/pages/home.html"
         },
         {
             "Title":"About Us Page",
             "Type":"content",
             "Description":"This about us page is designed to describe a business and it's staff.",
-            "Path": "ct-mk2/Pages/about-us.html"
+            "Path": "ct-mk2/pages/about-us.html"
         },
         {
             "Title":"About Author Page",
             "Type":"content",
             "Description":"This page highlights an author or can be used for a person's biography.",
-            "Path": "ct-mk2/Pages/author.html"
+            "Path": "ct-mk2/pages/author.html"
         },
         {
             "Title":"Contact Us Page",
             "Type":"content",
             "Description":"This is an example contact us form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
-            "Path": "ct-mk2/Pages/contact-us.html"
+            "Path": "ct-mk2/pages/contact-us.html"
         }
     ]
 }

@@ -4,13 +4,13 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "sb-cb/Pages/home.html"
+            "Path": "sb-cb/pages/home.html"
         },
         {
             "Title": "About Blogger Page",
             "Type": "content",
             "Description": "This about us page is designed to describe a business and it's staff.",
-            "Path": "sb-cb/Pages/about.html"
+            "Path": "sb-cb/pages/about.html"
         },
         {
             "Title": "Contact Blogger Page",
@@ -22,7 +22,7 @@
             "Title": "Blog Post Page",
             "Type": "content",
             "Description": "This page highlights an author or can be used for a person's biography.",
-            "Path": "sb-cb/Pages/post.html"
+            "Path": "sb-cb/pages/post.html"
         }
     ]
 }

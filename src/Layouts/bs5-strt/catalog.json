@@ -4,7 +4,7 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "bs5-strt/Pages/home.html"
+            "Path": "bs5-strt/pages/home.html"
         }
     ]
 }
