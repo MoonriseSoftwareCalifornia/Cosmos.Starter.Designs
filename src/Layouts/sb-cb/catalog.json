@@ -16,7 +16,7 @@
             "Title": "Contact Blogger Page",
             "Type": "content",
             "Description": "This is an example contact blogger form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
-            "Path": "ct-mk2/Pages/contact.html"
+            "Path": "ct-mk2/pages/contact.html"
         },
         {
             "Title": "Blog Post Page",

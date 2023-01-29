@@ -4,7 +4,7 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "blank/Pages/home.html"
+            "Path": "blank/pages/home.html"
         }
     ]
 }
