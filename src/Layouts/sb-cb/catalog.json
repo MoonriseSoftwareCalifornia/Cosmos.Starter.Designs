@@ -4,25 +4,25 @@
             "Title": "Home Page",
             "Type": "home",
             "Description": "Website home page for this layout.",
-            "Path": "sb-cb/pages/home.html"
+            "Path": "home.html"
         },
         {
             "Title": "About Blogger Page",
             "Type": "content",
             "Description": "This about us page is designed to describe a business and it's staff.",
-            "Path": "sb-cb/pages/about.html"
+            "Path": "about.html"
         },
         {
             "Title": "Contact Blogger Page",
             "Type": "content",
             "Description": "This is an example contact blogger form. A developer would need to connect it to a service such as SendGrid, Mailchimp or Constant Contact.",
-            "Path": "ct-mk2/pages/contact.html"
+            "Path": "contact.html"
         },
         {
             "Title": "Blog Post Page",
             "Type": "content",
             "Description": "This page highlights an author or can be used for a person's biography.",
-            "Path": "sb-cb/pages/post.html"
+            "Path": "post.html"
         }
     ]
 }
