@@ -3,7 +3,7 @@
         {
             "Id": "a01-cwps",
             "Name": "1. Cosmos Starter Layout",
-            "Description": "This is a 'blank' template that can be used to help you create your own template. Within are comments and help information that explain how to build your template.",
+            "Description": "This layout is nearly the same used for the Cosmos WPS product website, and it is a good layout to load to learn Cosmos.  It uses Bootstrap with Material Design principles, and jQuery, and it contains a number of template pages to help you kick-start your website development.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
