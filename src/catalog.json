@@ -1,50 +1,56 @@
 {
     "LayoutCatalog": [
         {
-            "Id": "blank",
-            "Name": "Blank Template",
+            "Id": "a01-cwps",
+            "Name": "1. Cosmos Starter Layout",
             "Description": "This is a 'blank' template that can be used to help you create your own template. Within are comments and help information that explain how to build your template.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
-            "Id": "ca-ds",
-            "Name": "California Design System",
-            "Description": "The Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.",
+            "Id": "blank",
+            "Name": "2. Blank Layout",
+            "Description": "This is a 'blank' template that can be used to help you create your own template. Within are comments and help information that explain how to build your template.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
             "Id": "bs5-strt",
-            "Name": "Bootstrapt 5 Starter (OFFICIAL)",
+            "Name": "3. Bootstrapt 5 Starter (OFFICIAL)",
             "Description": "Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started. Complete documentation on how to use <a href='https://getbootstrap.com/'>Bootstrap</a> can be found on the <a href='https://getbootstrap.com/'>project website</a>.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
+            "Id": "ca-ds",
+            "Name": "4. California Design System",
+            "Description": "The Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.",
+            "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
+        },
+        {
             "Id": "mdb-cfc",
-            "Name": "Material Design for Bootstrap 5 by MDB",
+            "Name": "5. Material Design for Bootstrap 5 by MDB",
             "Description": "Carousel full cover starter template from <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/' target='_blank'>Material Design</a>. Documentation for how to use this theme can be found at <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/'>GitHub</a>.",
             "License": "<a href='https://mdbootstrap.com/general/license/'>MIT</a>"
         },
         {
             "Id": "mdb-dark",
-            "Name": "Material Design for Bootstrap 5 by MDB (Dark Theme)",
+            "Name": "6. Material Design for Bootstrap 5 by MDB (Dark Theme)",
             "Description": "Carousel full cover starter dark-theme template from <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/' target='_blank'>Material Design</a>. Documentation for how to use this theme can be found at <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/'>GitHub</a>.",
             "License": "<a href='https://mdbootstrap.com/general/license/'>MIT</a>"
         },
         {
             "Id": "ct-mk2",
-            "Name": "Bootstrap 5 Inspired by Material Design by Tim Material Kit 2",
+            "Name": "7. Bootstrap 5 Inspired by Material Design by Tim Material Kit 2",
             "Description": "The most complex and innovative UI Kit Made by <a href='https://www.creative-tim.com/'>Creative Tim</a>. This is a Free Bootstrap 5 UI Kit with a fresh, new design inspired by Google's Material Design 2. <a href='https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit'>Documentation can be found on online</a>.",
             "License": "<a href='https://github.com/timcreative/freebies/blob/master/LICENSE.md'>MIT</a>"
         },
         {
             "Id": "sb-cb",
-            "Name": "Clean Blog Layout",
+            "Name": "8. Clean Blog Layout",
             "Description": "Clean Blog is a stylish, responsive blog theme for Bootstrap created by <a href='https://github.com/StartBootstrap/startbootstrap-clean-blog/'>Start Bootstrap </a>.",
             "License": "<a href='https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE'>MIT</a>"
         },
         {
             "Id": "tm-dev",
-            "Name": "Bootstrap 5 Tutorial by Traversy Media",
+            "Name": "9. Bootstrap 5 Tutorial by Traversy Media",
             "Description": "An example Bootstrap 5 template built as part of a tutorial by <a href='https://traversymedia.com/'>Traversy Media</a> that is on <a href='https://www.youtube.com/watch?v=4sosXZsdy-s'>YouTube</a>.",
             "License": ""
         }
