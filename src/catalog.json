@@ -3,7 +3,7 @@
         {
             "Id": "a01-cwps",
             "Name": "1. Cosmos Starter Layout",
-            "Description": "This layout is nearly the same used for the Cosmos WPS product website, and it is a good layout to load to learn Cosmos.  It uses Bootstrap with Material Design principles, and jQuery, and it contains a number of template pages to help you kick-start your website development.",
+            "Description": "This layout is nearly the same used for the Cosmos WPS product website, and it is a good layout to learn Cosmos.  It uses Bootstrap with Material Design principles, and jQuery, and it contains a number of template pages to help you kick-start your website development.",
             "License": "<a href='https://raw.githubusercontent.com/MoonriseSoftwareCalifornia/Cosmos.Starter.Layouts/main/src/Layouts/a01-cwps/LICENSE'>MIT</a>"
         },
         {
