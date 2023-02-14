@@ -1,0 +1,28 @@
+{
+ "Pages": [
+  {
+   "Title": "Home Page",
+   "Type": "home",
+   "Description": "Website home page for this layout. It contains a hero banner, cards grid and other sections",
+   "Path": "home.html"
+  },
+  {
+   "Title": "Side navigation layout",
+   "Type": "content",
+   "Description": "In this layout the left side navigation is occupying 1/4 of the page. The rest of the content resides on the right side",
+   "Path": "sidenav.html"
+  },
+  {
+   "Title": "Landing page layout",
+   "Type": "content",
+   "Description": "Landing page layout goes full width and doen't have a predefined width container. Instead, there are multiple content container sections.",
+   "Path": "landing.html"
+  },
+  {
+   "Title": "One column page layout",
+   "Type": "content",
+   "Description": "In the one column layout the main content is enclosed into the narrower content container.",
+   "Path": "onecol.html"
+  }
+ ]
+}
