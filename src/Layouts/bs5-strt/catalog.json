@@ -1,10 +1,28 @@
 {
-    "Pages" : [
+    "Pages": [
         {
             "Title": "Home Page",
             "Type": "home",
-            "Description": "Website home page for this layout.",
+            "Description": "Bootstrap 5 starter template home page with hero section and feature cards.",
             "Path": "home.html"
+        },
+        {
+            "Title": "About Page",
+            "Type": "content",
+            "Description": "About page with team member cards and company information section.",
+            "Path": "about.html"
+        },
+        {
+            "Title": "Contact Page",
+            "Type": "content",
+            "Description": "Contact form page with Bootstrap validation and interactive elements.",
+            "Path": "contact.html"
+        },
+        {
+            "Title": "Gallery Page",
+            "Type": "content",
+            "Description": "Image gallery page with lightbox functionality for showcasing photos.",
+            "Path": "gallery.html"
         }
     ]
 }

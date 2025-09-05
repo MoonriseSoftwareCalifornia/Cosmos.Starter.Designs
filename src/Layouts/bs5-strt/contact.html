@@ -55,6 +55,25 @@
     }
   </style>
 
+  <!-- Page-specific meta tags for contact page -->
+  <meta name="description" content="Contact our team - we'd love to hear from you and help with your Bootstrap project">
+  <meta name="keywords" content="contact, support, bootstrap, help, get in touch">
+  
+  <!-- Contact form styling -->
+  <style>
+    .contact-form {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid #dee2e6;
+    }
+    
+    .contact-info {
+      background-color: #e9ecef;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+  </style>
 
 
   <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
@@ -81,46 +100,86 @@
 
   <div class="col-lg-8 mx-auto p-3 py-md-5">
     <main>
-      <h1>Get started with Bootstrap</h1>
-      <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with
-        this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.
-      </p>
-
-      <div class="mb-5">
-        <a href="https://getbootstrap.com/docs/5.0/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
-      </div>
-
-      <hr class="col-3 col-md-2 mb-5">
-
-      <div class="row g-5">
-        <div class="col-md-6">
-          <h2>Starter projects</h2>
-          <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate
-            to a new GitHub repository.</p>
-          <ul class="icon-list">
-            <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm
-                starter</a></li>
-            <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
-          </ul>
-        </div>
-
-        <div class="col-md-6">
-          <h2>Guides</h2>
-          <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-          <ul class="icon-list">
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap quick start
-                guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/contribute/">Contributing to Bootstrap</a>
-            </li>
-          </ul>
+      <div class="col-md-8" contenteditable="true">
+        <h1>Contact Us</h1>
+        <p class="fs-5">Get in touch with our team. We'd love to hear from you and help with your Bootstrap project.</p>
+        
+        <div class="row mt-5">
+          <div class="col-md-8">
+            <div class="contact-form">
+              <h3>Send us a message</h3>
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p>We typically respond within 24 hours during business days.</p>
+              <ul class="list-unstyled">
+                <li><strong>Email:</strong> hello@example.com</li>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>Address:</strong> 123 Bootstrap St, Web City, WC 12345</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </div>
 
 
+  <!-- Contact form validation and interaction -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.querySelector('#contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple validation
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+          
+          if (name && email && message) {
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+          } else {
+            alert('Please fill in all required fields.');
+          }
+        });
+      }
+      
+      // Add visual feedback to form fields
+      const formInputs = document.querySelectorAll('.form-control');
+      formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.style.backgroundColor = '#fff3cd';
+        });
+        input.addEventListener('blur', function() {
+          this.parentElement.style.backgroundColor = '';
+        });
+      });
+    });
+  </script>
 
 
   <cosmos-layout-footer>
