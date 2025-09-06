@@ -1,0 +1,10 @@
+{
+    "Pages": [
+        {
+            "Title": "Home Page",
+            "Type": "home",
+            "Description": "Your template home page description",
+            "Path": "home.html"
+        }
+    ]
+}

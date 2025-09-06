@@ -1,0 +1,12 @@
+{
+  "name": "your-template-name",
+  "version": "1.0.0",
+  "description": "Your template description here",
+  "scripts": {
+    "build": "node build-templates.js",
+    "watch": "node build-templates.js --watch"
+  },
+  "keywords": ["cosmos-cms", "template", "bootstrap"],
+  "author": "Your Name",
+  "license": "MIT"
+}
