@@ -5,18 +5,11 @@ function buildTemplate(templateName, layoutPath, pageFolder, outputPath) {
     console.log(`Building ${templateName}...`);
     
     // Read the base template
-    const baseTemplatePath = path.join(layoutPath, 'base-template.html');
-    if (!fs.existsSync(baseTemplatePath)) {
-        throw new Error(`base-template.html not found in ${layoutPath}`);
-    }
+    const baseTemplatePath = path.join(layoutPath, '_source', 'base-template.html');
     let template = fs.readFileSync(baseTemplatePath, 'utf8');
     
     // Read all layout components
     const componentsDir = path.join(layoutPath, '_source', 'layout-components');
-    if (!fs.existsSync(componentsDir)) {
-        throw new Error(`Layout components directory not found: ${componentsDir}`);
-    }
-    
     const componentFiles = fs.readdirSync(componentsDir);
     
     // Replace all component placeholders
@@ -31,9 +24,6 @@ function buildTemplate(templateName, layoutPath, pageFolder, outputPath) {
     
     // Read page content (required)
     const contentPath = path.join(pageFolder, 'content.html');
-    if (!fs.existsSync(contentPath)) {
-        throw new Error(`content.html not found in ${pageFolder}`);
-    }
     const pageContent = fs.readFileSync(contentPath, 'utf8');
     template = template.replace('{{PAGE_CONTENT}}', pageContent);
     
@@ -69,9 +59,11 @@ function buildTemplate(templateName, layoutPath, pageFolder, outputPath) {
 function validateCosmosCompatibility(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const requiredElements = [
-        '<!-- COSMOS TEMPLATE LAYOUT HEAD -->',
-        '<!-- COSMOS TEMPLATE LAYOUT FOOTER -->',
-        '<!-- COSMOS TEMPLATE CONTENT -->'
+        '<cosmos-layout-header>',
+        '</cosmos-layout-header>',
+        '<cosmos-layout-footer>',
+        '</cosmos-layout-footer>',
+        '<!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->'
     ];
     
     const missingElements = requiredElements.filter(element => !content.includes(element));
@@ -86,75 +78,71 @@ function validateCosmosCompatibility(filePath) {
     return true;
 }
 
-function buildLayout() {
+function buildLayout(layoutName) {
     const layoutPath = '.'; // Current directory since script is in the layout folder
     const sourcePath = path.join(layoutPath, '_source');
-    const templateName = path.basename(process.cwd()); // Get folder name
     
     // Check if _source directory exists
     if (!fs.existsSync(sourcePath)) {
-        console.log(` Error: _source directory not found. Please create the _source directory with layout-components and content folders.`);
+        console.log(`Skipping ${layoutName} - no _source directory found`);
         return;
     }
     
-    console.log(`\n Building template: ${templateName}`);
+    console.log(`\n🔨 Building layout: ${layoutName}`);
     
     // Clean output directory - get all existing HTML files and remove them
     const existingFiles = fs.readdirSync(layoutPath).filter(file => 
         file.endsWith('.html') && 
         !file.startsWith('_') && 
-        file !== 'base-template.html'
+        file !== 'ckeditor-content.css'
     );
     
     existingFiles.forEach(file => {
         const filePath = path.join(layoutPath, file);
         fs.unlinkSync(filePath);
-        console.log(`Cleaned: ${file}`);
+        console.log(`🗑️  Cleaned: ${file}`);
     });
     
     // Build all content folders
     const contentDir = path.join(sourcePath, 'content');
-    if (!fs.existsSync(contentDir)) {
-        console.log(`Error: content directory not found at ${contentDir}`);
-        return;
-    }
-    
-    const contentFolders = fs.readdirSync(contentDir).filter(item => {
-        return fs.statSync(path.join(contentDir, item)).isDirectory();
-    });
-    
-    if (contentFolders.length === 0) {
-        console.log(`Error: No content folders found in ${contentDir}`);
-        return;
-    }
-    
-    contentFolders.forEach(folderName => {
-        const pageFolder = path.join(contentDir, folderName);
-        const contentFile = path.join(pageFolder, 'content.html');
+    if (fs.existsSync(contentDir)) {
+        const contentFolders = fs.readdirSync(contentDir).filter(item => {
+            return fs.statSync(path.join(contentDir, item)).isDirectory();
+        });
         
-        // Check if required content.html exists
-        if (fs.existsSync(contentFile)) {
-            const outputFileName = `${folderName}.html`;
-            const outputPath = path.join(layoutPath, outputFileName);
+        contentFolders.forEach(folderName => {
+            const pageFolder = path.join(contentDir, folderName);
+            const contentFile = path.join(pageFolder, 'content.html');
             
-            buildTemplate(outputFileName, layoutPath, pageFolder, outputPath);
-            validateCosmosCompatibility(outputPath);
-        } else {
-            console.warn(`Skipping ${folderName} - no content.html found`);
-        }
-    });
+            // Check if required content.html exists
+            if (fs.existsSync(contentFile)) {
+                const outputFileName = `${folderName}.html`;
+                const outputPath = path.join(layoutPath, outputFileName);
+                
+                buildTemplate(outputFileName, layoutPath, pageFolder, outputPath);
+                validateCosmosCompatibility(outputPath);
+            } else {
+                console.warn(`⚠️  Skipping ${folderName} - no content.html found`);
+            }
+        });
+    }
     
-    console.log(`Completed building ${templateName}`);
+    console.log(`✅ Completed building ${layoutName}`);
 }
 
 // Main execution
-console.log('Starting template build process...\n');
+console.log('🚀 Starting template build process...\n');
+
+// Automatically detect the current folder name
+const currentDir = process.cwd();
+const layoutName = path.basename(currentDir);
+
+console.log(`📁 Detected layout folder: ${layoutName}`);
 
 try {
-    buildLayout();
+    buildLayout(layoutName);
 } catch (error) {
-    console.error(`Error building template:`, error.message);
-    process.exit(1);
+    console.error(`❌ Error building layout:`, error.message);
 }
 
-console.log('\nBuild process completed!');
+console.log('\n🎉 Build process completed!');

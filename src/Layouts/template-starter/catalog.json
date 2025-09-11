@@ -3,7 +3,7 @@
         {
             "Title": "Home Page",
             "Type": "home",
-            "Description": "Your template home page description",
+            "Description": "Framework-agnostic starter template home page with modular component system.",
             "Path": "home.html"
         }
     ]
