@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Please note:
+  * The "Title" tag within the <head></head> tags is injected by Cosmos CMS. 
+    Therefore do not add it.
+  * Make sure the layout only contains the resources you want to appear on
+    every page.
+  * Page specific code is injected by Cosmos CMS automatically below. -->
+  
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <!-- ADD LAYOUT HEAD CONTENT HERE -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 
+      STARTER STYLES - Framework Agnostic
+      
+      These are minimal styles to provide basic layout structure.
+      Replace or extend these with your preferred CSS framework.
+    */
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 1rem 0;
+    }
+    
+    .footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .main-content {
+      padding: 2rem 0;
+      min-height: 60vh;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .text-muted { color: #6c757d; }
+    .mb-3 { margin-bottom: 1rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .main-content {
+        padding: 1rem 0;
+      }
+    }
+    
+    /* 
+      CUSTOMIZATION GUIDE:
+      
+      1. Replace these styles with your preferred CSS framework
+      2. Or extend them with additional custom styles
+      3. Common frameworks to consider:
+         - Bootstrap 5: Advanced component library
+         - Tailwind CSS: Utility-first CSS framework
+         - Bulma: Modern CSS framework based on Flexbox
+         - Foundation: Responsive front-end framework
+         - Custom CSS: Write your own styles
+    */
+  </style>
+
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <!-- 
+      Defines the code that should appear at the very top of each page.
+
+      Please note:
+          * Only put in this file the code that should appear at the
+            head of every page on your website.
+          * If you are using Cosmos CMS' built-in dynamic navigation tool, which 
+            depends on bootstrap, add the following code within the nav bar:
+            
+            <div class="collapse navbar-collapse" id="navbarExample01" crx="true">
+                <!-- {COSMOS-UL-NAV} ->
+            </div>
+
+          * Use of the navigation tools is optional! If you don't use bootstrap,
+            then don't use this option.
+    -->
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo/Brand -->
+          <div class="flex-shrink-0">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition duration-300">
+              Your Brand
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Home
+              </a>
+              <a href="/about" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                About
+              </a>
+              <a href="/contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Contact
+              </a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="mobile-menu-button text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600" aria-label="Toggle menu">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+            <a href="/" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Home
+            </a>
+            <a href="/about" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              About
+            </a>
+            <a href="/contact" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>
+
+  </cosmos-layout-header>
+
+  <div class="main-content">
+    <div class="container">
+      <!-- 
+        LAYOUT CONTENT:
+        
+        This is the layout.html content area. In Cosmos CMS, the layout.html
+        typically serves as the base template that other pages can inherit from.
+        
+        This content will be the same as home.html in most cases, unless you
+        need different layouts for different page types.
+        
+        The 'contenteditable="true"' attribute allows content editing 
+        in Cosmos CMS's live editor.
+      -->
+      
+      <main>
+        <div class="text-center mb-4">
+          <h1 contenteditable="true">Welcome to Your Website</h1>
+          <p class="text-muted" contenteditable="true">
+            This is a starter template for building websites with any CSS framework.
+            Customize this content to match your project's needs.
+          </p>
+        </div>
+        
+        <div contenteditable="true">
+          <h2>Getting Started</h2>
+          <p>
+            To customize this template:
+          </p>
+          <ol>
+            <li>Choose your preferred CSS framework (Bootstrap, Tailwind, etc.)</li>
+            <li>Update the head.html component with your framework's CDN links</li>
+            <li>Replace the basic styles in styles.html with framework-specific styles</li>
+            <li>Customize the header.html and footer.html components</li>
+            <li>Add your content to this section</li>
+            <li>Run <code>node build-templates.js</code> to generate the final HTML files</li>
+          </ol>
+        </div>
+        
+        <div contenteditable="true">
+          <h2>Features</h2>
+          <p>
+            This template includes:
+          </p>
+          <ul>
+            <li>Framework-agnostic structure</li>
+            <li>Modular component system</li>
+            <li>Cosmos CMS compatibility</li>
+            <li>Build script for generating final HTML</li>
+            <li>Responsive design foundation</li>
+            <li>SEO-friendly structure</li>
+          </ul>
+        </div>
+        
+        <div class="text-center mb-3" contenteditable="true">
+          <h3>Ready to build something amazing?</h3>
+          <p>Start customizing this template to create your unique website.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+  <cosmos-layout-footer>
+    <div class="footer">
+      <div class="container">
+        <!-- 
+          FOOTER CUSTOMIZATION:
+          
+          This is a basic footer structure. Customize it based on your needs
+        -->
+        
+        <footer>
+          <div class="text-center">
+            <p class="text-muted">
+              &copy; 2025 Your Website Name. All rights reserved.
+            </p>
+            <!-- Add more footer content as needed -->
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

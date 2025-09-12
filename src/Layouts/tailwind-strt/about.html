@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Please note:
+  * The "Title" tag within the <head></head> tags is injected by Cosmos CMS. 
+    Therefore do not add it.
+  * Make sure the layout only contains the resources you want to appear on
+    every page.
+  * Page specific code is injected by Cosmos CMS automatically below. -->
+  
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <!-- ADD LAYOUT HEAD CONTENT HERE -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 
+      STARTER STYLES - Framework Agnostic
+      
+      These are minimal styles to provide basic layout structure.
+      Replace or extend these with your preferred CSS framework.
+    */
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 1rem 0;
+    }
+    
+    .footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .main-content {
+      padding: 2rem 0;
+      min-height: 60vh;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .text-muted { color: #6c757d; }
+    .mb-3 { margin-bottom: 1rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .main-content {
+        padding: 1rem 0;
+      }
+    }
+    
+    /* 
+      CUSTOMIZATION GUIDE:
+      
+      1. Replace these styles with your preferred CSS framework
+      2. Or extend them with additional custom styles
+      3. Common frameworks to consider:
+         - Bootstrap 5: Advanced component library
+         - Tailwind CSS: Utility-first CSS framework
+         - Bulma: Modern CSS framework based on Flexbox
+         - Foundation: Responsive front-end framework
+         - Custom CSS: Write your own styles
+    */
+  </style>
+
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <!-- 
+      Defines the code that should appear at the very top of each page.
+
+      Please note:
+          * Only put in this file the code that should appear at the
+            head of every page on your website.
+          * If you are using Cosmos CMS' built-in dynamic navigation tool, which 
+            depends on bootstrap, add the following code within the nav bar:
+            
+            <div class="collapse navbar-collapse" id="navbarExample01" crx="true">
+                <!-- {COSMOS-UL-NAV} ->
+            </div>
+
+          * Use of the navigation tools is optional! If you don't use bootstrap,
+            then don't use this option.
+    -->
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo/Brand -->
+          <div class="flex-shrink-0">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition duration-300">
+              Your Brand
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Home
+              </a>
+              <a href="/about" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                About
+              </a>
+              <a href="/contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Contact
+              </a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="mobile-menu-button text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600" aria-label="Toggle menu">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+            <a href="/" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Home
+            </a>
+            <a href="/about" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              About
+            </a>
+            <a href="/contact" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>
+
+  </cosmos-layout-header>
+
+<!-- About Page Content -->
+<div class="bg-white">
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
+        <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+          We're passionate about creating exceptional digital experiences that make a difference.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Founded in 2020, we started with a simple mission: to help businesses thrive in the digital world. 
+          What began as a small team of passionate developers has grown into a full-service digital agency.
+        </p>
+        <p class="text-lg text-gray-600 mb-6">
+          We believe that great design and technology should be accessible to everyone. That's why we focus 
+          on creating solutions that are not only beautiful but also functional and user-friendly.
+        </p>
+        <div class="flex items-center space-x-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-600">100+</div>
+            <div class="text-sm text-gray-500">Projects Completed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-600">50+</div>
+            <div class="text-sm text-gray-500">Happy Clients</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-600">5</div>
+            <div class="text-sm text-gray-500">Years Experience</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="w-full h-64 bg-gray-200 rounded-lg shadow-xl flex items-center justify-center">
+          <div class="text-center text-gray-500">
+            <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <p class="text-sm">Team Image Placeholder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission & Values -->
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We're driven by core values that guide everything we do.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+          <p class="text-gray-600">
+            We stay ahead of the curve by embracing new technologies and creative solutions.
+          </p>
+        </div>
+        
+        <div class="text-center p-6 bg-white rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality</h3>
+          <p class="text-gray-600">
+            We're committed to delivering exceptional quality in every project we undertake.
+          </p>
+        </div>
+        
+        <div class="text-center p-6 bg-white rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Collaboration</h3>
+          <p class="text-gray-600">
+            We work closely with our clients as partners to achieve shared success.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Get to know the talented individuals who make our company great.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">John Smith</h3>
+        <p class="text-blue-600 mb-3">CEO & Founder</p>
+        <p class="text-gray-600 text-sm">
+          Passionate about technology and innovation, John leads our team with vision and expertise.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
+        <p class="text-blue-600 mb-3">Lead Designer</p>
+        <p class="text-gray-600 text-sm">
+          Creative visionary who transforms ideas into stunning visual experiences.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Mike Chen</h3>
+        <p class="text-blue-600 mb-3">Lead Developer</p>
+        <p class="text-gray-600 text-sm">
+          Technical expert who brings designs to life with clean, efficient code.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="bg-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Work Together?</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Let's discuss how we can help bring your vision to life.
+      </p>
+      <a href="/contact" 
+         class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+        Get In Touch
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <cosmos-layout-footer>
+    <div class="footer">
+      <div class="container">
+        <!-- 
+          FOOTER CUSTOMIZATION:
+          
+          This is a basic footer structure. Customize it based on your needs
+        -->
+        
+        <footer>
+          <div class="text-center">
+            <p class="text-muted">
+              &copy; 2025 Your Website Name. All rights reserved.
+            </p>
+            <!-- Add more footer content as needed -->
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>
