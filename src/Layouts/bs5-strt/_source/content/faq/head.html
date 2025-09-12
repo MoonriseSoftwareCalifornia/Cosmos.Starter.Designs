@@ -1,1 +1,30 @@
-<h1>This will be injected in the head?</h1>
+<!-- FAQ Page specific head content -->
+<meta name="description" content="Frequently Asked Questions - Find answers to common questions about our services, pricing, support, and technical information.">
+<meta name="keywords" content="FAQ, frequently asked questions, support, help, answers">
+
+<!-- FAQ specific styles -->
+<style>
+  .accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary-bg-subtle);
+    border-color: var(--bs-primary-border-subtle);
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: var(--bs-primary);
+  }
+  
+  .nav-pills .nav-link {
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-pills {
+      flex-direction: column;
+    }
+    
+    .nav-pills .nav-link {
+      margin: 0.125rem 0;
+    }
+  }
+</style>

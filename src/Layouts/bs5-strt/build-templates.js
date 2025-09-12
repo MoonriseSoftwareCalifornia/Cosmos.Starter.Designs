@@ -17,7 +17,7 @@ function buildTemplate(templateName, layoutPath, pageFolder, outputPath) {
         if (file.endsWith('.html')) {
             const componentName = file.replace('.html', '');
             const componentContent = fs.readFileSync(path.join(componentsDir, file), 'utf8');
-            const placeholder = `{{PARTIAL:${componentName}}}`;
+            const placeholder = `{{LAYOUT:${componentName}}}`;
             template = template.replace(placeholder, componentContent);
         }
     });
@@ -133,9 +133,14 @@ function buildLayout(layoutName) {
 // Main execution
 console.log('🚀 Starting template build process...\n');
 
-// For now, just build the current layout (bs5-strt)
+// Automatically detect the current folder name
+const currentDir = process.cwd();
+const layoutName = path.basename(currentDir);
+
+console.log(`📁 Detected layout folder: ${layoutName}`);
+
 try {
-    buildLayout('bs5-strt');
+    buildLayout(layoutName);
 } catch (error) {
     console.error(`❌ Error building layout:`, error.message);
 }
