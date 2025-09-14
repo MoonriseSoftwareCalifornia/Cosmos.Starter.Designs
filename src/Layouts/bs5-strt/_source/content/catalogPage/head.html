@@ -1,0 +1,67 @@
+  <!-- Catalog-specific meta tags -->
+  <meta name="description" content="Browse our comprehensive catalog of web development services, design packages, consulting, and maintenance solutions">
+  <meta name="keywords" content="catalog, products, services, web development, design, consulting, maintenance, packages">
+  
+  <!-- Catalog-specific styling -->
+  <style>
+    .catalog-item {
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .catalog-item:hover {
+      transform: translateY(-2px);
+    }
+    
+    .card {
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover .card-img-top {
+      transform: scale(1.02);
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+    }
+    
+    .btn[data-filter] {
+      transition: all 0.3s ease;
+    }
+    
+    .btn[data-filter].active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .fade-out {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .fade-in {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+      .d-flex.flex-wrap.gap-2 {
+        flex-direction: column;
+      }
+      
+      .btn[data-filter] {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>

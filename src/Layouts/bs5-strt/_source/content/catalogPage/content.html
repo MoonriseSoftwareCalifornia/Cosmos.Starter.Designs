@@ -1,0 +1,297 @@
+  <div class="col-lg-10 mx-auto p-3 py-md-5">
+    <main>
+      <!-- Hero Section -->
+      <div class="text-center mb-5" contenteditable="true">
+        <h1 class="display-4 fw-bold mb-3">Our Products & Services</h1>
+        <p class="fs-5 text-muted">Discover our comprehensive catalog of premium solutions designed to help your business succeed in the digital world.</p>
+      </div>
+
+      <!-- Filter and Search Section -->
+      <div class="row mb-5" contenteditable="true">
+        <div class="col-lg-8">
+          <!-- Category Filter Buttons -->
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <button class="btn btn-outline-primary active" data-filter="all">All Products</button>
+            <button class="btn btn-outline-primary" data-filter="web-development">Web Development</button>
+            <button class="btn btn-outline-primary" data-filter="design">Design Services</button>
+            <button class="btn btn-outline-primary" data-filter="consulting">Consulting</button>
+            <button class="btn btn-outline-primary" data-filter="maintenance">Maintenance</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Search Box -->
+          <div class="input-group">
+            <span class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </span>
+            <input type="text" class="form-control" id="catalogSearch" placeholder="Search products...">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Products Grid -->
+      <div class="row g-4" id="catalogGrid">
+        <!-- Web Development Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=1" class="card-img-top" alt="Custom Website Development">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Custom Website Development</h5>
+              <p class="card-text">Professional responsive websites built with modern technologies and best practices.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $2,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Responsive Design</li>
+                  <li>✓ Modern Framework</li>
+                  <li>✓ SEO Optimized</li>
+                  <li>✓ 30-day Support</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=2" class="card-img-top" alt="E-commerce Solution">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">E-commerce Solution</h5>
+              <p class="card-text">Complete online store with payment processing, inventory management, and admin panel.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $4,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Payment Gateway</li>
+                  <li>✓ Inventory Management</li>
+                  <li>✓ Admin Dashboard</li>
+                  <li>✓ Mobile Optimized</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=3" class="card-img-top" alt="Web Application">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Custom Web Application</h5>
+              <p class="card-text">Powerful web applications tailored to your business processes and workflows.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $7,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Custom Features</li>
+                  <li>✓ Database Integration</li>
+                  <li>✓ User Management</li>
+                  <li>✓ API Development</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="design">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=4" class="card-img-top" alt="UI/UX Design">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">UI/UX Design Package</h5>
+              <p class="card-text">Complete user interface and experience design for web and mobile applications.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success">Design</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $1,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Wireframes</li>
+                  <li>✓ Mockups</li>
+                  <li>✓ Prototypes</li>
+                  <li>✓ Style Guide</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="design">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=5" class="card-img-top" alt="Brand Identity">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Brand Identity Design</h5>
+              <p class="card-text">Complete brand identity package including logo, colors, typography, and guidelines.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success">Design</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $1,499</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Logo Design</li>
+                  <li>✓ Color Palette</li>
+                  <li>✓ Typography</li>
+                  <li>✓ Brand Guidelines</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consulting Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="consulting">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=6" class="card-img-top" alt="Digital Strategy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Digital Strategy Consulting</h5>
+              <p class="card-text">Strategic planning and consultation to optimize your digital presence and growth.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-warning text-dark">Consulting</span>
+                  <span class="fw-bold text-primary fs-5">$150/hour</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Digital Audit</li>
+                  <li>✓ Strategy Planning</li>
+                  <li>✓ Implementation Guide</li>
+                  <li>✓ Performance Metrics</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Book Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="consulting">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=7" class="card-img-top" alt="Technical Audit">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Technical Audit & Review</h5>
+              <p class="card-text">Comprehensive technical review of your existing systems and recommendations.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-warning text-dark">Consulting</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Code Review</li>
+                  <li>✓ Security Assessment</li>
+                  <li>✓ Performance Analysis</li>
+                  <li>✓ Action Plan</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maintenance Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="maintenance">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=8" class="card-img-top" alt="Website Maintenance">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Website Maintenance Plan</h5>
+              <p class="card-text">Monthly maintenance package to keep your website secure, updated, and running smoothly.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-info">Maintenance</span>
+                  <span class="fw-bold text-primary fs-5">$199/month</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Security Updates</li>
+                  <li>✓ Backup Services</li>
+                  <li>✓ Performance Monitoring</li>
+                  <li>✓ Content Updates</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="maintenance">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=9" class="card-img-top" alt="Emergency Support">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Emergency Support Service</h5>
+              <p class="card-text">24/7 emergency support for critical issues and urgent website problems.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-info">Maintenance</span>
+                  <span class="fw-bold text-primary fs-5">$399/month</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ 24/7 Availability</li>
+                  <li>✓ 1-hour Response</li>
+                  <li>✓ Priority Support</li>
+                  <li>✓ Emergency Fixes</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="text-center py-5" style="display: none;">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </div>
+        <h4 class="text-muted">No products found</h4>
+        <p class="text-muted">Try adjusting your search or filter criteria</p>
+        <button class="btn btn-primary" onclick="clearFilters()">Show All Products</button>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="text-center bg-light rounded-3 p-5 mt-5" contenteditable="true">
+        <h3 class="mb-3">Need Something Custom?</h3>
+        <p class="mb-4">Don't see exactly what you're looking for? We specialize in custom solutions tailored to your specific business needs.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/contact" class="btn btn-primary btn-lg">Get Custom Quote</a>
+          <a href="/about" class="btn btn-outline-primary btn-lg">Learn About Us</a>
+        </div>
+      </div>
+    </main>
+  </div>

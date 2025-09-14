@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Starter Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: .25rem;
+    }
+
+    .icon-list li::before {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: .5rem;
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+    }
+  </style>
+
+<!-- Portfolio Page Custom Styles -->
+<style>
+    /* Hero Section */
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(102, 16, 242, 0.9) 100%);
+        z-index: 1;
+    }
+    
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .min-vh-50 {
+        min-height: 50vh;
+    }
+
+    /* Portfolio Cards */
+    .portfolio-card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .portfolio-image {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+    
+    .portfolio-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .portfolio-card:hover .portfolio-image img {
+        transform: scale(1.05);
+    }
+    
+    .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(102, 16, 242, 0.9) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .portfolio-card:hover .portfolio-overlay {
+        opacity: 1;
+    }
+    
+    .portfolio-overlay-content {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .portfolio-info {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio-info h5 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .portfolio-info p {
+        flex-grow: 1;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-tags {
+        margin-top: auto;
+    }
+    
+    .portfolio-tags .badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+        margin-bottom: 40px;
+    }
+    
+    .filter-btn {
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid #0066cc;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+        background-color: #0066cc;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    }
+
+    /* Portfolio Item Animation */
+    .portfolio-item {
+        transition: all 0.3s ease;
+    }
+    
+    .portfolio-item.hidden {
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none;
+    }
+
+    /* Stats Section */
+    .stat-item {
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stat-number {
+        background: linear-gradient(135deg, #0066cc 0%, #6610f2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: countUp 2s ease-out;
+    }
+    
+    @keyframes countUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Lightbox Enhancements */
+    .lightbox-link {
+        text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 60px 0;
+        }
+        
+        .display-4 {
+            font-size: 2.5rem;
+        }
+        
+        .portfolio-image {
+            height: 200px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .portfolio-info {
+            padding: 20px;
+        }
+        
+        .hero-section .lead {
+            font-size: 1.1rem;
+        }
+        
+        .display-5 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Loading Animation */
+    .portfolio-grid-loading {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    .portfolio-grid-loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #0066cc;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+    }
+    
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Hover Effects for CTAs */
+    .btn-primary:hover,
+    .btn-outline-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+    }
+    
+    .btn-light:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+</style>
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="fs-4">Starter template</span>
+        </a>
+      </header>
+    </div>
+
+  </cosmos-layout-header>
+
+<!-- Portfolio Page Content -->
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5 mb-5">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4" contenteditable="true">Our Portfolio</h1>
+                <p class="lead mb-4" contenteditable="true">Explore our latest projects and discover the quality and innovation we bring to every client partnership.</p>
+                <a href="#portfolio-showcase" class="btn btn-light btn-lg">View Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Filters -->
+<section class="py-5" id="portfolio-showcase">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="text-center mb-4">
+                    <h2 class="display-5 fw-bold mb-3" contenteditable="true">Featured Projects</h2>
+                    <p class="lead text-muted" contenteditable="true">Filter by category to find projects that match your interests</p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons text-center mb-5">
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn active" data-filter="all">All Projects</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="web-design">Web Design</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="branding">Branding</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="photography">Photography</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row g-4" id="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/0066cc/ffffff?text=E-Commerce+Platform" alt="E-Commerce Platform" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">E-Commerce Platform</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Modern online shopping experience</p>
+                                <a href="https://via.placeholder.com/800x600/0066cc/ffffff?text=E-Commerce+Platform" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm" contenteditable="true">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">E-Commerce Platform</h5>
+                        <p class="text-muted small" contenteditable="true">A comprehensive online shopping platform with advanced features and seamless user experience.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-primary me-1" contenteditable="true">React</span>
+                            <span class="badge bg-primary me-1" contenteditable="true">Node.js</span>
+                            <span class="badge bg-primary me-1" contenteditable="true">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="mobile-app">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/28a745/ffffff?text=Fitness+Tracker+App" alt="Fitness Tracker App" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Fitness Tracker App</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Track workouts and health metrics</p>
+                                <a href="https://via.placeholder.com/800x600/28a745/ffffff?text=Fitness+Tracker+App" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Fitness Tracker App</h5>
+                        <p class="text-muted small" contenteditable="true">Mobile application for tracking fitness goals, workouts, and health metrics with social features.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-success me-1" contenteditable="true">React Native</span>
+                            <span class="badge bg-success me-1" contenteditable="true">Firebase</span>
+                            <span class="badge bg-success me-1" contenteditable="true">Health Kit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/fd7e14/ffffff?text=Brand+Identity+Design" alt="Brand Identity Design" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Brand Identity Design</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Complete brand redesign project</p>
+                                <a href="https://via.placeholder.com/800x600/fd7e14/ffffff?text=Brand+Identity+Design" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Brand Identity Design</h5>
+                        <p class="text-muted small" contenteditable="true">Complete brand identity redesign including logo, color palette, and marketing materials.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-warning me-1" contenteditable="true">Photoshop</span>
+                            <span class="badge bg-warning me-1" contenteditable="true">Illustrator</span>
+                            <span class="badge bg-warning me-1" contenteditable="true">Branding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/6f42c1/ffffff?text=Corporate+Website" alt="Corporate Website" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Corporate Website</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Professional business presence</p>
+                                <a href="https://via.placeholder.com/800x600/6f42c1/ffffff?text=Corporate+Website" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Corporate Website</h5>
+                        <p class="text-muted small" contenteditable="true">Modern corporate website with content management system and multi-language support.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-info me-1" contenteditable="true">WordPress</span>
+                            <span class="badge bg-info me-1" contenteditable="true">PHP</span>
+                            <span class="badge bg-info me-1" contenteditable="true">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="photography">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/e83e8c/ffffff?text=Product+Photography" alt="Product Photography" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Product Photography</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Professional product shots</p>
+                                <a href="https://via.placeholder.com/800x600/e83e8c/ffffff?text=Product+Photography" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Gallery</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Full Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Product Photography</h5>
+                        <p class="text-muted small" contenteditable="true">High-quality product photography for e-commerce and marketing campaigns.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-danger me-1" contenteditable="true">Photography</span>
+                            <span class="badge bg-danger me-1" contenteditable="true">Lightroom</span>
+                            <span class="badge bg-danger me-1" contenteditable="true">Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="mobile-app">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/20c997/ffffff?text=Restaurant+App" alt="Restaurant App" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Restaurant App</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Food ordering and delivery</p>
+                                <a href="https://via.placeholder.com/800x600/20c997/ffffff?text=Restaurant+App" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Try Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Restaurant App</h5>
+                        <p class="text-muted small" contenteditable="true">Complete food ordering and delivery application with real-time tracking and payment integration.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-success me-1" contenteditable="true">Flutter</span>
+                            <span class="badge bg-success me-1" contenteditable="true">Stripe</span>
+                            <span class="badge bg-success me-1" contenteditable="true">Maps API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/dc3545/ffffff?text=Logo+Design+Suite" alt="Logo Design Suite" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Logo Design Suite</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Creative logo collection</p>
+                                <a href="https://via.placeholder.com/800x600/dc3545/ffffff?text=Logo+Design+Suite" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Designs</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Brand Guide</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Logo Design Suite</h5>
+                        <p class="text-muted small" contenteditable="true">Collection of unique logo designs for various industries and brand personalities.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-danger me-1" contenteditable="true">Logo Design</span>
+                            <span class="badge bg-danger me-1" contenteditable="true">Vector Art</span>
+                            <span class="badge bg-danger me-1" contenteditable="true">Creative</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/17a2b8/ffffff?text=SaaS+Dashboard" alt="SaaS Dashboard" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">SaaS Dashboard</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Analytics and reporting platform</p>
+                                <a href="https://via.placeholder.com/800x600/17a2b8/ffffff?text=SaaS+Dashboard" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">SaaS Dashboard</h5>
+                        <p class="text-muted small" contenteditable="true">Comprehensive analytics dashboard with real-time data visualization and reporting features.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-info me-1" contenteditable="true">Vue.js</span>
+                            <span class="badge bg-info me-1" contenteditable="true">D3.js</span>
+                            <span class="badge bg-info me-1" contenteditable="true">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="photography">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/6610f2/ffffff?text=Event+Photography" alt="Event Photography" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h5 class="text-white mb-2" contenteditable="true">Event Photography</h5>
+                                <p class="text-white-50 mb-3" contenteditable="true">Corporate and social events</p>
+                                <a href="https://via.placeholder.com/800x600/6610f2/ffffff?text=Event+Photography" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Gallery</a>
+                                <a href="#" class="btn btn-outline-light btn-sm">Book Session</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h5 class="mb-2" contenteditable="true">Event Photography</h5>
+                        <p class="text-muted small" contenteditable="true">Professional event photography capturing memorable moments at corporate and social gatherings.</p>
+                        <div class="portfolio-tags">
+                            <span class="badge bg-primary me-1" contenteditable="true">Event Photo</span>
+                            <span class="badge bg-primary me-1" contenteditable="true">Portrait</span>
+                            <span class="badge bg-primary me-1" contenteditable="true">Documentary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Stats -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-primary mb-2" contenteditable="true">150+</div>
+                    <h5 class="stat-label" contenteditable="true">Projects Completed</h5>
+                    <p class="text-muted" contenteditable="true">Successfully delivered projects across various industries</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-primary mb-2" contenteditable="true">98%</div>
+                    <h5 class="stat-label" contenteditable="true">Client Satisfaction</h5>
+                    <p class="text-muted" contenteditable="true">Consistently exceeding client expectations</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-primary mb-2" contenteditable="true">5+</div>
+                    <h5 class="stat-label" contenteditable="true">Years Experience</h5>
+                    <p class="text-muted" contenteditable="true">Building expertise in digital solutions</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-primary mb-2" contenteditable="true">24/7</div>
+                    <h5 class="stat-label" contenteditable="true">Support Available</h5>
+                    <p class="text-muted" contenteditable="true">Round-the-clock support for all clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4" contenteditable="true">Ready to Start Your Project?</h2>
+                <p class="lead mb-4" contenteditable="true">Let's collaborate to bring your vision to life. Contact us today to discuss your next project.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="#" class="btn btn-primary btn-lg">Get Started Today</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">View More Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Portfolio Page JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Portfolio filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    
+    // Filter portfolio items
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Add loading state
+            portfolioGrid.classList.add('portfolio-grid-loading');
+            
+            setTimeout(() => {
+                // Filter items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+                
+                // Remove loading state
+                portfolioGrid.classList.remove('portfolio-grid-loading');
+            }, 300);
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Animate statistics on scroll
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    animateNumber(stat);
+                });
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    const statsSection = document.querySelector('.bg-light');
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+    
+    // Number animation function
+    function animateNumber(element) {
+        const finalNumber = element.textContent;
+        const isPercentage = finalNumber.includes('%');
+        const isPlus = finalNumber.includes('+');
+        const isSlash = finalNumber.includes('/');
+        
+        let numericValue = parseInt(finalNumber.replace(/[^\d]/g, ''));
+        
+        if (isNaN(numericValue)) return;
+        
+        let current = 0;
+        const increment = numericValue / 60; // Animation duration
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= numericValue) {
+                current = numericValue;
+                clearInterval(timer);
+            }
+            
+            let displayValue = Math.floor(current);
+            if (isPercentage) displayValue += '%';
+            if (isPlus) displayValue += '+';
+            if (isSlash) displayValue = displayValue += '/7';
+            
+            element.textContent = displayValue;
+        }, 16);
+    }
+    
+    // Portfolio card hover effects
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    portfolioCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Lazy loading for images
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.style.opacity = '0';
+                img.onload = () => {
+                    img.style.transition = 'opacity 0.3s ease';
+                    img.style.opacity = '1';
+                };
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    const portfolioImages = document.querySelectorAll('.portfolio-image img');
+    portfolioImages.forEach(img => imageObserver.observe(img));
+    
+    // Search functionality (if search input is added later)
+    function setupSearch() {
+        const searchInput = document.getElementById('portfolio-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                portfolioItems.forEach(item => {
+                    const title = item.querySelector('h5').textContent.toLowerCase();
+                    const description = item.querySelector('p').textContent.toLowerCase();
+                    const tags = Array.from(item.querySelectorAll('.badge')).map(badge => badge.textContent.toLowerCase());
+                    
+                    const matchesSearch = title.includes(searchTerm) || 
+                                        description.includes(searchTerm) || 
+                                        tags.some(tag => tag.includes(searchTerm));
+                    
+                    if (matchesSearch || searchTerm === '') {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        }
+    }
+    
+    // Initialize search if element exists
+    setupSearch();
+    
+    // Keyboard navigation for filters
+    filterBtns.forEach((btn, index) => {
+        btn.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const nextIndex = e.key === 'ArrowRight' ? 
+                    (index + 1) % filterBtns.length : 
+                    (index - 1 + filterBtns.length) % filterBtns.length;
+                filterBtns[nextIndex].focus();
+            }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+    
+    // Add ARIA labels for accessibility
+    filterBtns.forEach(btn => {
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('aria-pressed', btn.classList.contains('active'));
+    });
+    
+    // Update ARIA labels when filter changes
+    const originalFilterClick = filterBtns[0].onclick;
+    filterBtns.forEach(btn => {
+        const originalClick = btn.onclick;
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+            this.setAttribute('aria-pressed', 'true');
+        });
+    });
+    
+    // Performance optimization: Debounce scroll events
+    let scrollTimer = null;
+    window.addEventListener('scroll', function() {
+        if (scrollTimer) {
+            clearTimeout(scrollTimer);
+        }
+        scrollTimer = setTimeout(function() {
+            // Add any scroll-based animations here
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-bg');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        }, 10);
+    });
+    
+    // Initialize Lightbox if available
+    if (typeof lightbox !== 'undefined') {
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'albumLabel': "Image %1 of %2"
+        });
+    }
+    
+    console.log('Portfolio page initialized successfully');
+});
+
+// Utility function to add more portfolio items dynamically
+function addPortfolioItem(item) {
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    const portfolioItem = document.createElement('div');
+    portfolioItem.className = 'col-lg-4 col-md-6 portfolio-item';
+    portfolioItem.setAttribute('data-category', item.category);
+    
+    portfolioItem.innerHTML = `
+        <div class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="${item.image}" alt="${item.title}" class="img-fluid">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-overlay-content">
+                        <h5 class="text-white mb-2">${item.title}</h5>
+                        <p class="text-white-50 mb-3">${item.subtitle}</p>
+                        <a href="${item.lightboxImage}" class="btn btn-light btn-sm me-2 lightbox-link" data-lightbox="portfolio">View Project</a>
+                        <a href="${item.link}" class="btn btn-outline-light btn-sm">${item.linkText}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-info">
+                <h5 class="mb-2">${item.title}</h5>
+                <p class="text-muted small">${item.description}</p>
+                <div class="portfolio-tags">
+                    ${item.tags.map(tag => `<span class="badge bg-primary me-1">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    portfolioGrid.appendChild(portfolioItem);
+}
+</script>
+
+
+  <cosmos-layout-footer>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

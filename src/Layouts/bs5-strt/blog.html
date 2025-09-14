@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Starter Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: .25rem;
+    }
+
+    .icon-list li::before {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: .5rem;
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+    }
+  </style>
+
+<!-- Blog-specific meta tags -->
+<meta name="description" content="Read our latest blog posts about web development, design trends, business insights, and technology updates">
+<meta name="keywords" content="blog, articles, web development, design, business, technology, insights, tutorials">
+
+<!-- Blog-specific styling -->
+<style>
+  /* Blog container padding */
+  .blog-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .blog-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .blog-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  .blog-post-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .blog-post-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-post-card:hover .blog-post-image {
+    transform: scale(1.05);
+  }
+  
+  .blog-category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+  }
+  
+  .blog-meta {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .blog-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .featured-post {
+    background: linear-gradient(135deg, var(--bs-primary-bg-subtle) 0%, var(--bs-secondary-bg-subtle) 100%);
+    border-left: 4px solid var(--bs-primary);
+  }
+  
+  .sidebar-widget {
+    background: var(--bs-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-filter {
+    transition: all 0.3s ease;
+  }
+  
+  .category-filter.active {
+    background-color: var(--bs-primary);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  .search-highlight {
+    background-color: yellow;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-post-image {
+      height: 180px;
+    }
+    
+    .sidebar-widget {
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="fs-4">Starter template</span>
+        </a>
+      </header>
+    </div>
+
+  </cosmos-layout-header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-10 mx-auto px-4 px-md-5">
+      <!-- Hero Section -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">Our Blog</h1>
+        <p class="fs-5 text-muted">Stay updated with the latest insights, tutorials, and industry trends from our team of experts.</p>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="row mb-5">
+  <div class="col-md-8">
+    <!-- Search Box -->
+    <div class="input-group input-group-lg">
+      <span class="input-group-text bg-light border-end-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </span>
+      <input type="text" class="form-control border-start-0" id="blogSearch" placeholder="Search blog posts..." aria-label="Search blog posts">
+    </div>
+  </div>
+  <div class="col-md-4 mt-3 mt-md-0">
+    <!-- Category Filter -->
+    <select class="form-select form-select-lg" id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="web-development">Web Development</option>
+      <option value="design">Design</option>
+      <option value="business">Business</option>
+      <option value="tutorials">Tutorials</option>
+      <option value="news">News</option>
+    </select>
+  </div>
+</div>
+
+<!-- Featured Post -->
+<div class="featured-post rounded-3 p-4 mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <span class="badge bg-primary mb-2">Featured</span>
+      <h2 class="h3 mb-3">The Future of Web Development: Trends to Watch in 2025</h2>
+      <p class="mb-3">Explore the cutting-edge technologies and methodologies that are shaping the future of web development. From AI integration to progressive web apps, discover what's next.</p>
+      <div class="blog-meta mb-3">
+        <span class="me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+          September 10, 2025
+        </span>
+        <span class="me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person me-1" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+          </svg>
+          Sarah Johnson
+        </span>
+        <span class="badge bg-secondary">Web Development</span>
+      </div>
+      <a href="#" class="btn btn-primary">Read Full Article</a>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="https://picsum.photos/400/250?random=1" class="img-fluid rounded-3" alt="Featured Post">
+    </div>
+  </div>
+</div>
+
+<!-- Blog Posts Grid -->
+<div class="row g-4" id="blogGrid">
+  <!-- Web Development Posts -->
+  <div class="col-md-6 blog-post-item" data-category="web-development">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=2" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-primary blog-category-badge">Web Development</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Getting Started with Bootstrap 5: A Complete Guide</h5>
+        <p class="card-text blog-excerpt">Learn the fundamentals of Bootstrap 5 and how to create responsive, modern web interfaces with this comprehensive tutorial covering components, utilities, and best practices.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 8, 2025 • 5 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="design">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=3" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-success blog-category-badge">Design</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">UI/UX Design Principles for Modern Web Applications</h5>
+        <p class="card-text blog-excerpt">Discover the essential design principles that create exceptional user experiences. From color theory to user psychology, learn what makes interfaces truly effective.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 6, 2025 • 7 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="business">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=4" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-warning text-dark blog-category-badge">Business</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Digital Transformation: Why Your Business Needs a Website</h5>
+        <p class="card-text blog-excerpt">In today's digital age, having a professional website isn't optional—it's essential. Learn why your business needs an online presence and how to get started.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 4, 2025 • 6 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="tutorials">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=5" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-info blog-category-badge">Tutorials</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Step-by-Step Guide to Responsive Web Design</h5>
+        <p class="card-text blog-excerpt">Master the art of responsive web design with this comprehensive tutorial. Learn CSS Grid, Flexbox, and media queries to create websites that work on any device.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 2, 2025 • 10 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="news">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=6" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-danger blog-category-badge">News</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Industry Update: Latest Web Development Trends</h5>
+        <p class="card-text blog-excerpt">Stay ahead of the curve with the latest trends in web development. From AI integration to new JavaScript frameworks, here's what's making waves in 2025.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            August 30, 2025 • 4 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="design">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=7" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-success blog-category-badge">Design</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Color Psychology in Web Design: Choose the Right Palette</h5>
+        <p class="card-text blog-excerpt">Colors evoke emotions and influence user behavior. Learn how to choose the perfect color palette for your website to enhance user experience and conversions.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            August 28, 2025 • 5 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- No Results Message -->
+<div id="noResults" class="text-center py-5" style="display: none;">
+  <div class="mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </div>
+  <h4 class="text-muted">No blog posts found</h4>
+  <p class="text-muted">Try adjusting your search or filter criteria</p>
+  <button class="btn btn-primary" onclick="clearBlogFilters()">Show All Posts</button>
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Blog pagination" class="mt-5">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        Previous
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Newsletter Signup -->
+<div class="text-center bg-light rounded-3 p-5 mt-5">
+  <h3 class="mb-3">Stay Updated</h3>
+  <p class="mb-4">Subscribe to our newsletter to get the latest blog posts and updates delivered to your inbox.</p>
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+        <small class="text-muted">We respect your privacy. Unsubscribe at any time.</small>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Blog-specific JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const blogPosts = document.querySelectorAll('.blog-post-item');
+    const searchInput = document.getElementById('blogSearch');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const noResults = document.getElementById('noResults');
+    
+    let currentSearch = '';
+    let currentCategory = 'all';
+    
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+      currentSearch = this.value.toLowerCase();
+      filterPosts();
+    });
+    
+    // Category filter functionality
+    categoryFilter.addEventListener('change', function() {
+      currentCategory = this.value;
+      filterPosts();
+    });
+    
+    // Combined filter function
+    function filterPosts() {
+      let visibleCount = 0;
+      
+      blogPosts.forEach(post => {
+        const category = post.dataset.category;
+        const title = post.querySelector('.card-title').textContent.toLowerCase();
+        const excerpt = post.querySelector('.blog-excerpt').textContent.toLowerCase();
+        
+        const matchesCategory = currentCategory === 'all' || category === currentCategory;
+        const matchesSearch = currentSearch === '' || 
+                            title.includes(currentSearch) || 
+                            excerpt.includes(currentSearch);
+        
+        if (matchesCategory && matchesSearch) {
+          post.style.display = 'block';
+          post.style.opacity = '1';
+          post.style.transform = 'translateY(0)';
+          visibleCount++;
+        } else {
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            if (post.style.opacity === '0') {
+              post.style.display = 'none';
+            }
+          }, 300);
+        }
+      });
+      
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+    
+    // Clear filters function
+    window.clearBlogFilters = function() {
+      searchInput.value = '';
+      categoryFilter.value = 'all';
+      currentSearch = '';
+      currentCategory = 'all';
+      filterPosts();
+    };
+    
+    // Initialize with staggered animation
+    blogPosts.forEach((post, index) => {
+      post.style.opacity = '0';
+      post.style.transform = 'translateY(30px)';
+      setTimeout(() => {
+        post.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        post.style.opacity = '1';
+        post.style.transform = 'translateY(0)';
+      }, index * 100);
+    });
+    
+    console.log('Blog initialized with', blogPosts.length, 'posts');
+  });
+</script>
+
+
+  <cosmos-layout-footer>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

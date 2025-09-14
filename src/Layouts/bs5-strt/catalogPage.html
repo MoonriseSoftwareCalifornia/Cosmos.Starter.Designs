@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Starter Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: .25rem;
+    }
+
+    .icon-list li::before {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: .5rem;
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+    }
+  </style>
+
+  <!-- Catalog-specific meta tags -->
+  <meta name="description" content="Browse our comprehensive catalog of web development services, design packages, consulting, and maintenance solutions">
+  <meta name="keywords" content="catalog, products, services, web development, design, consulting, maintenance, packages">
+  
+  <!-- Catalog-specific styling -->
+  <style>
+    .catalog-item {
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .catalog-item:hover {
+      transform: translateY(-2px);
+    }
+    
+    .card {
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover .card-img-top {
+      transform: scale(1.02);
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+    }
+    
+    .btn[data-filter] {
+      transition: all 0.3s ease;
+    }
+    
+    .btn[data-filter].active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .fade-out {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .fade-in {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+      .d-flex.flex-wrap.gap-2 {
+        flex-direction: column;
+      }
+      
+      .btn[data-filter] {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="fs-4">Starter template</span>
+        </a>
+      </header>
+    </div>
+
+  </cosmos-layout-header>
+
+  <div class="col-lg-10 mx-auto p-3 py-md-5">
+    <main>
+      <!-- Hero Section -->
+      <div class="text-center mb-5" contenteditable="true">
+        <h1 class="display-4 fw-bold mb-3">Our Products & Services</h1>
+        <p class="fs-5 text-muted">Discover our comprehensive catalog of premium solutions designed to help your business succeed in the digital world.</p>
+      </div>
+
+      <!-- Filter and Search Section -->
+      <div class="row mb-5" contenteditable="true">
+        <div class="col-lg-8">
+          <!-- Category Filter Buttons -->
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <button class="btn btn-outline-primary active" data-filter="all">All Products</button>
+            <button class="btn btn-outline-primary" data-filter="web-development">Web Development</button>
+            <button class="btn btn-outline-primary" data-filter="design">Design Services</button>
+            <button class="btn btn-outline-primary" data-filter="consulting">Consulting</button>
+            <button class="btn btn-outline-primary" data-filter="maintenance">Maintenance</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Search Box -->
+          <div class="input-group">
+            <span class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </span>
+            <input type="text" class="form-control" id="catalogSearch" placeholder="Search products...">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Products Grid -->
+      <div class="row g-4" id="catalogGrid">
+        <!-- Web Development Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=1" class="card-img-top" alt="Custom Website Development">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Custom Website Development</h5>
+              <p class="card-text">Professional responsive websites built with modern technologies and best practices.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $2,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Responsive Design</li>
+                  <li>✓ Modern Framework</li>
+                  <li>✓ SEO Optimized</li>
+                  <li>✓ 30-day Support</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=2" class="card-img-top" alt="E-commerce Solution">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">E-commerce Solution</h5>
+              <p class="card-text">Complete online store with payment processing, inventory management, and admin panel.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $4,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Payment Gateway</li>
+                  <li>✓ Inventory Management</li>
+                  <li>✓ Admin Dashboard</li>
+                  <li>✓ Mobile Optimized</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="web-development">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=3" class="card-img-top" alt="Web Application">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Custom Web Application</h5>
+              <p class="card-text">Powerful web applications tailored to your business processes and workflows.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Web Development</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $7,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Custom Features</li>
+                  <li>✓ Database Integration</li>
+                  <li>✓ User Management</li>
+                  <li>✓ API Development</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="design">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=4" class="card-img-top" alt="UI/UX Design">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">UI/UX Design Package</h5>
+              <p class="card-text">Complete user interface and experience design for web and mobile applications.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success">Design</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $1,999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Wireframes</li>
+                  <li>✓ Mockups</li>
+                  <li>✓ Prototypes</li>
+                  <li>✓ Style Guide</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="design">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=5" class="card-img-top" alt="Brand Identity">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Brand Identity Design</h5>
+              <p class="card-text">Complete brand identity package including logo, colors, typography, and guidelines.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success">Design</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $1,499</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Logo Design</li>
+                  <li>✓ Color Palette</li>
+                  <li>✓ Typography</li>
+                  <li>✓ Brand Guidelines</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consulting Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="consulting">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=6" class="card-img-top" alt="Digital Strategy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Digital Strategy Consulting</h5>
+              <p class="card-text">Strategic planning and consultation to optimize your digital presence and growth.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-warning text-dark">Consulting</span>
+                  <span class="fw-bold text-primary fs-5">$150/hour</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Digital Audit</li>
+                  <li>✓ Strategy Planning</li>
+                  <li>✓ Implementation Guide</li>
+                  <li>✓ Performance Metrics</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Book Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="consulting">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=7" class="card-img-top" alt="Technical Audit">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Technical Audit & Review</h5>
+              <p class="card-text">Comprehensive technical review of your existing systems and recommendations.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-warning text-dark">Consulting</span>
+                  <span class="fw-bold text-primary fs-5">Starting at $999</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Code Review</li>
+                  <li>✓ Security Assessment</li>
+                  <li>✓ Performance Analysis</li>
+                  <li>✓ Action Plan</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maintenance Services -->
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="maintenance">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=8" class="card-img-top" alt="Website Maintenance">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Website Maintenance Plan</h5>
+              <p class="card-text">Monthly maintenance package to keep your website secure, updated, and running smoothly.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-info">Maintenance</span>
+                  <span class="fw-bold text-primary fs-5">$199/month</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ Security Updates</li>
+                  <li>✓ Backup Services</li>
+                  <li>✓ Performance Monitoring</li>
+                  <li>✓ Content Updates</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 catalog-item" data-category="maintenance">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/400/250?random=9" class="card-img-top" alt="Emergency Support">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Emergency Support Service</h5>
+              <p class="card-text">24/7 emergency support for critical issues and urgent website problems.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-info">Maintenance</span>
+                  <span class="fw-bold text-primary fs-5">$399/month</span>
+                </div>
+                <ul class="list-unstyled small text-muted mb-3">
+                  <li>✓ 24/7 Availability</li>
+                  <li>✓ 1-hour Response</li>
+                  <li>✓ Priority Support</li>
+                  <li>✓ Emergency Fixes</li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline-secondary">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="text-center py-5" style="display: none;">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </div>
+        <h4 class="text-muted">No products found</h4>
+        <p class="text-muted">Try adjusting your search or filter criteria</p>
+        <button class="btn btn-primary" onclick="clearFilters()">Show All Products</button>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="text-center bg-light rounded-3 p-5 mt-5" contenteditable="true">
+        <h3 class="mb-3">Need Something Custom?</h3>
+        <p class="mb-4">Don't see exactly what you're looking for? We specialize in custom solutions tailored to your specific business needs.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/contact" class="btn btn-primary btn-lg">Get Custom Quote</a>
+          <a href="/about" class="btn btn-outline-primary btn-lg">Learn About Us</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- Catalog-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const catalogItems = document.querySelectorAll('.catalog-item');
+      const searchInput = document.getElementById('catalogSearch');
+      const noResults = document.getElementById('noResults');
+      
+      let currentFilter = 'all';
+      let currentSearch = '';
+      
+      // Filter functionality
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          currentFilter = this.dataset.filter;
+          filterItems();
+        });
+      });
+      
+      // Search functionality
+      searchInput.addEventListener('input', function() {
+        currentSearch = this.value.toLowerCase();
+        filterItems();
+      });
+      
+      // Combined filter and search function
+      function filterItems() {
+        let visibleCount = 0;
+        
+        catalogItems.forEach(item => {
+          const category = item.dataset.category;
+          const title = item.querySelector('.card-title').textContent.toLowerCase();
+          const description = item.querySelector('.card-text').textContent.toLowerCase();
+          const features = Array.from(item.querySelectorAll('li')).map(li => li.textContent.toLowerCase()).join(' ');
+          
+          const matchesFilter = currentFilter === 'all' || category === currentFilter;
+          const matchesSearch = currentSearch === '' || 
+                              title.includes(currentSearch) || 
+                              description.includes(currentSearch) ||
+                              features.includes(currentSearch);
+          
+          if (matchesFilter && matchesSearch) {
+            item.style.display = 'block';
+            item.classList.add('fade-in');
+            item.classList.remove('fade-out');
+            visibleCount++;
+          } else {
+            item.classList.add('fade-out');
+            item.classList.remove('fade-in');
+            setTimeout(() => {
+              if (item.classList.contains('fade-out')) {
+                item.style.display = 'none';
+              }
+            }, 300);
+          }
+        });
+        
+        // Show/hide no results message
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+        } else {
+          noResults.style.display = 'none';
+        }
+      }
+      
+      // Clear filters function (accessible globally)
+      window.clearFilters = function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        filterButtons[0].classList.add('active'); // "All Products" button
+        searchInput.value = '';
+        currentFilter = 'all';
+        currentSearch = '';
+        filterItems();
+      };
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Add loading animation for card images
+      const cardImages = document.querySelectorAll('.card-img-top');
+      cardImages.forEach(img => {
+        img.addEventListener('load', function() {
+          this.style.opacity = '0';
+          this.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => {
+            this.style.opacity = '1';
+          }, 100);
+        });
+      });
+      
+      // Initialize with fade-in animation
+      catalogItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+      
+      console.log('Catalog initialized with', catalogItems.length, 'items');
+    });
+  </script>
+
+
+  <cosmos-layout-footer>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>
