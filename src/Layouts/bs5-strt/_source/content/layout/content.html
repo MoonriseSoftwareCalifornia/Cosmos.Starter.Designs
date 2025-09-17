@@ -1,40 +1,171 @@
-  <div class="col-lg-8 mx-auto p-3 py-md-5">
-    <main>
-      <h1>Get started with Bootstrap</h1>
-      <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with
-        this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.
-      </p>
 
-      <div class="mb-5">
-        <a href="https://getbootstrap.com/docs/5.0/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
-      </div>
-
-      <hr class="col-3 col-md-2 mb-5">
-
-      <div class="row g-5">
-        <div class="col-md-6">
-          <h2>Starter projects</h2>
-          <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate
-            to a new GitHub repository.</p>
-          <ul class="icon-list">
-            <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm
-                starter</a></li>
-            <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
-          </ul>
-        </div>
-
-        <div class="col-md-6">
-          <h2>Guides</h2>
-          <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-          <ul class="icon-list">
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap quick start
-                guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/contribute/">Contributing to Bootstrap</a>
-            </li>
-          </ul>
+<div class="container-fluid">
+  <main>
+    <!-- Hero Section -->
+    <div class="bg-primary text-white py-5 mb-5 rounded">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">Bootstrap 5 Starter Template</h1>
+        <p class="lead mb-4 col-lg-8 mx-auto">
+          Build fast, responsive sites with Bootstrap 5 - the world's most popular front-end component library.
+          Features a comprehensive collection of components, utilities, and layout options.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <!-- "Get Started" should scroll to the Features section -->
+          <button class="btn btn-light btn-lg px-4 me-md-2" type="button" onclick="document.getElementById('features-section').scrollIntoView({behavior: 'smooth'});">Get Started</button>
+          <!-- "View Components" should scroll to the Bootstrap Components Showcase -->
+          <button class="btn btn-outline-light btn-lg px-4" type="button" onclick="document.getElementById('components-showcase').scrollIntoView({behavior: 'smooth'});">View Components</button>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+
+    <div class="container">
+      <!-- Features Section -->
+      <div class="row g-4 mb-5" id="features-section" contenteditable="true">
+        <div class="col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                <svg class="text-white" width="24" height="24" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </div>
+              <h4 class="card-title">Component Library</h4>
+              <p class="card-text">Extensive collection of pre-built components including navigation, forms, buttons, and more.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-success bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                <svg class="text-white" width="24" height="24" fill="currentColor">
+                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+                </svg>
+              </div>
+              <h4 class="card-title">Responsive Grid</h4>
+              <p class="card-text">Powerful mobile-first flexbox grid system with 12 columns and 6 responsive breakpoints.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-info bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                <svg class="text-white" width="24" height="24" fill="currentColor">
+                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </div>
+              <h4 class="card-title">Utility Classes</h4>
+              <p class="card-text">Hundreds of utility classes for spacing, colors, flexbox, positioning, and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap Components Showcase -->
+      <div class="mb-5" id="components-showcase">
+        <h2 class="text-center mb-5" contenteditable="true">Bootstrap 5 Components</h2>
+        
+        <!-- Buttons Section -->
+        <div class="mb-4">
+          <h3 class="mb-3" contenteditable="true">Button Variants</h3>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-outline-primary">Outline</button>
+          </div>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="mb-4">
+          <h3 class="mb-3" contenteditable="true">Progress Indicators</h3>
+          <div class="progress mb-3" style="height: 20px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"></div>
+          </div>
+          <div class="progress mb-3" style="height: 20px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 50%"></div>
+          </div>
+          <div class="progress" style="height: 20px;">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="mb-4">
+          <h3 class="mb-3" contenteditable="true">Alert Messages</h3>
+          <div class="alert alert-primary d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+              <use xlink:href="#info-fill"/>
+            </svg>
+            <div>This is a primary alert with an icon!</div>
+          </div>
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>This is a success alert with additional content and styling.</p>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <h3 class="mb-3" contenteditable="true">Card Components</h3>
+            <div class="card">
+              <div class="card-header bg-primary text-white">
+                Featured Card
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bootstrap Card</h5>
+                <p class="card-text">Cards provide a flexible content container with multiple variants and options.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+              <div class="card-footer text-muted">
+                Card Footer
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <h3 class="mb-3" contenteditable="true">List Groups</h3>
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action active">
+                Active List Item
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">Regular Item</a>
+              <a href="#" class="list-group-item list-group-item-action">Another Item</a>
+              <a href="#" class="list-group-item list-group-item-action disabled">Disabled Item</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges and Pills -->
+        <div class="mb-4">
+          <h3 class="mb-3" contenteditable="true">Badges & Pills</h3>
+          <span class="badge bg-primary me-2">Primary</span>
+          <span class="badge bg-secondary me-2">Secondary</span>
+          <span class="badge bg-success me-2">Success</span>
+          <span class="badge rounded-pill bg-danger me-2">Rounded Pill</span>
+          <span class="badge rounded-pill bg-warning text-dark me-2">Warning</span>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="bg-light p-5 rounded mb-5 text-center">
+        <h2 class="display-6 fw-bold">Ready to Build Amazing Websites?</h2>
+        <p class="lead mb-4">
+          This Bootstrap 5 starter template provides a solid foundation with modern components, 
+          responsive design, and extensive customization options.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <a class="btn btn-outline-secondary btn-lg px-4" href="https://getbootstrap.com/docs/5.0/" target="_blank" rel="noopener">View Documentation</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
