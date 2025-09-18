@@ -1,0 +1,104 @@
+<!-- Blog-specific meta tags -->
+<meta name="description" content="Read our latest blog posts about web development, design trends, business insights, and technology updates">
+<meta name="keywords" content="blog, articles, web development, design, business, technology, insights, tutorials">
+
+<!-- Blog-specific styling -->
+<style>
+  /* Blog container padding */
+  .blog-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .blog-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .blog-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  .blog-post-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .blog-post-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-post-card:hover .blog-post-image {
+    transform: scale(1.05);
+  }
+  
+  .blog-category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+  }
+  
+  .blog-meta {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .blog-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .featured-post {
+    background: linear-gradient(135deg, var(--bs-primary-bg-subtle) 0%, var(--bs-secondary-bg-subtle) 100%);
+    border-left: 4px solid var(--bs-primary);
+  }
+  
+  .sidebar-widget {
+    background: var(--bs-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-filter {
+    transition: all 0.3s ease;
+  }
+  
+  .category-filter.active {
+    background-color: var(--bs-primary);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  .search-highlight {
+    background-color: yellow;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-post-image {
+      height: 180px;
+    }
+    
+    .sidebar-widget {
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>

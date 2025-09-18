@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Starter Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: .25rem;
+    }
+
+    .icon-list li::before {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: .5rem;
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+    }
+  </style>
+
+  <!-- Page-specific meta tags for contact page -->
+  <meta name="description" content="Contact our team - we'd love to hear from you and help with your Bootstrap project">
+  <meta name="keywords" content="contact, support, bootstrap, help, get in touch">
+  
+  <!-- Contact form styling -->
+  <style>
+    .contact-form {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid #dee2e6;
+    }
+    
+    .contact-info {
+      background-color: #e9ecef;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="fs-4">Starter template</span>
+        </a>
+      </header>
+    </div>
+
+  </cosmos-layout-header>
+
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <main>
+      <div class="col-md-8" contenteditable="true">
+        <h1>Contact Us</h1>
+        <p class="fs-5">Get in touch with our team. We'd love to hear from you and help with your Bootstrap project.</p>
+        
+        <div class="row mt-5">
+          <div class="col-md-8">
+            <div class="contact-form">
+              <h3>Send us a message</h3>
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p>We typically respond within 24 hours during business days.</p>
+              <ul class="list-unstyled">
+                <li><strong>Email:</strong> hello@example.com</li>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>Address:</strong> 123 Bootstrap St, Web City, WC 12345</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- Contact form validation and interaction -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.querySelector('#contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple validation
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+          
+          if (name && email && message) {
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+          } else {
+            alert('Please fill in all required fields.');
+          }
+        });
+      }
+      
+      // Add visual feedback to form fields
+      const formInputs = document.querySelectorAll('.form-control');
+      formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.style.backgroundColor = '#fff3cd';
+        });
+        input.addEventListener('blur', function() {
+          this.parentElement.style.backgroundColor = '';
+        });
+      });
+    });
+  </script>
+
+
+  <cosmos-layout-footer>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

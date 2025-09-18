@@ -1,32 +1,49 @@
-# Open Source Site Designs for Cosmos
+# Template Starter
 
-This repository is a collection of open source starter website designs that have been fitted for [Cosmos](https://github.com/CosmosSoftware/Cosmos.Cms).
-Each design is packaged to be easily imported into your Cosmos website.
+A simple starter template with modular components for Cosmos CMS. Copy this template and customize it with your preferred CSS framework or custom styles.
 
-Below lists some of our designs:
+## How to Add Your Design
 
-* [Cosmos CMS Site Designs](https://cosmos-layouts.moonrise.net/Layouts/a01-cwps/home.html) Author: Moonrise Software/MD Bootstrap, License: [MIT](https://cosmos-layouts.moonrise.net/Layouts/a01-cwps/LICENSE)
-* [Bootstrap 5 Starter](https://cosmos-layouts.moonrise.net/Layouts/bs5-strt/layout.html) Author: [Bootstrap Team](https://getbootstrap.com/docs/5.0/examples/starter-template/),  License: [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE)
-* [Bootstrap 5 by Traversy Media](https://cosmos-layouts.moonrise.net/Layouts/tm-dev/layout.html) with [YouTube Tutorial](https://youtu.be/4sosXZsdy-s) Author: [Traversy Media](https://traversymedia.com/) 
-* [Clean Blog Design](https://cosmos-layouts.moonrise.net/Layouts/sb-cb/layout.html) Author: [Start Bootstrap](https://github.com/StartBootstrap/startbootstrap-clean-blog/), License: [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
-* [Creative Tim Material Kit 2](https://cosmos-layouts.moonrise.net/Layouts/ct-mk2/layout.html) Author: [Creative Tim](https://www.creative-tim.com/), License: [MIT](https://github.com/timcreative/freebies/blob/master/LICENSE.md)
-* [MD Bootstrap Carousel Full Cover](https://cosmos-layouts.moonrise.net/Layouts/mdb-cfc/layout.html) Author: [MD Bootstrap](https://mdbootstrap.com/freebies/carousel-full-cover/), License:[MIT](https://mdbootstrap.com/general/license/)
-* [MD Bootstrap Dark Theme](https://cosmos-layouts.moonrise.net/Layouts/mdb-dark/layout.html) Author: [MD Bootstrap](https://github.com/mdbootstrap/bootstrap-5-dark-theme), License:[MIT](https://mdbootstrap.com/general/license/)
+Thank you for contributing!  Your help is very much appreciated!
 
-# How to Add Your Design
+1. This repository is an Azure Static website built with Visual Studio Code with the [Static Website plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps). You may want to install this before continuing.
+2. "Fork" [this repository](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts).
+3. Copy the folder located in "[Layouts/template-starter/]".  This is an example design that is "blank." Within it are notes and comments that can help you create a new design.
+4. Add your CSS framework to `_source/layout-components/head.html`
+5. Add your pages in `_source/content/`
+6. Run `node build-templates.js` to generate HTML files
+7. Once you are ready to contribute, create a "pull request."
 
-Thank you for contributing!  You're help is very much appreciated!
-
-Here is how to add your design:
-
-  * This repository is an Azure Static website built with Visual Studio Code with the [Static Website plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps). You may want to install this before continuing.
-  * "Fork" [this repository](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts).
-  * Create a new folder here for your own.  Keep the folder name short.
-  * Take a look at the file located in "[Layouts/Blank/layout.html](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/layout.html)".  This is an example design that is "blank." Within it are notes and comments that can help you create a new design.
-  * Now you want to add your design to [the catalog](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/catalog.json).
-  * Finally, create the catalog.json file in your new folder.  This file points to example pages for your design. See [the example](https://github.com/CosmosSoftware/Cosmos.Starter.Layouts/blob/main/src/Layouts/blank/catalog.json) in the blank design.
-  * Once you are ready to contribute, create a "pull request."
-
-Once the pull request is accepted and code is merged, your deisng will be added to the others.
+Once the pull request is accepted and code is merged, your design will be added to the others.
 
 If you have questions, please email: notifications@cosmosws.io.
+
+## Adding Pages
+
+1. Create folder in `_source/content/` (e.g., `about`)
+2. Add `content.html` file
+3. Optionally, add a `head.html` file for page-specific head content
+4. Optionally, add a `end.html` file for page-specific end content
+5. Add page entry in `catalog.json`
+6. Run build script `node build-templates.js` to generate the full HTML files for the pages you've created in the `_source/content/` folder, ready for Cosmos CMS.
+
+## Structure
+
+```
+template-starter/
+├── _source/                    # Edit these files
+│   ├── base-template.html     # Main template
+│   ├── layout-components/     # Header, footer, styles that *all* web pages in your website will need.
+│   └── content/home/          # Page content
+├── build-templates.js         # Generates HTML files
+└── catalog.json              # Page definitions
+```
+
+### Add Your CSS Framework
+
+Edit `_source/layout-components/head.html`:
+
+```html
+<!-- ADD LAYOUT HEAD CONTENT HERE -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+```

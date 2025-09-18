@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Please note:
+  * The "Title" tag within the <head></head> tags is injected by Cosmos CMS. 
+    Therefore do not add it.
+  * Make sure the layout only contains the resources you want to appear on
+    every page.
+  * Page specific code is injected by Cosmos CMS automatically below. -->
+  
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <!-- ADD LAYOUT HEAD CONTENT HERE -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 
+      STARTER STYLES - Framework Agnostic
+      
+      These are minimal styles to provide basic layout structure.
+      Replace or extend these with your preferred CSS framework.
+    */
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 1rem 0;
+    }
+    
+    .footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .main-content {
+      padding: 2rem 0;
+      min-height: 60vh;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .text-muted { color: #6c757d; }
+    .mb-3 { margin-bottom: 1rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .main-content {
+        padding: 1rem 0;
+      }
+    }
+    
+    /* 
+      CUSTOMIZATION GUIDE:
+      
+      1. Replace these styles with your preferred CSS framework
+      2. Or extend them with additional custom styles
+      3. Common frameworks to consider:
+         - Bootstrap 5: Advanced component library
+         - Tailwind CSS: Utility-first CSS framework
+         - Bulma: Modern CSS framework based on Flexbox
+         - Foundation: Responsive front-end framework
+         - Custom CSS: Write your own styles
+    */
+  </style>
+
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <!-- 
+      Defines the code that should appear at the very top of each page.
+
+      Please note:
+          * Only put in this file the code that should appear at the
+            head of every page on your website.
+          * If you are using Cosmos CMS' built-in dynamic navigation tool, which 
+            depends on bootstrap, add the following code within the nav bar:
+            
+            <div class="collapse navbar-collapse" id="navbarExample01" crx="true">
+                <!-- {COSMOS-UL-NAV} ->
+            </div>
+
+          * Use of the navigation tools is optional! If you don't use bootstrap,
+            then don't use this option.
+    -->
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo/Brand -->
+          <div class="flex-shrink-0">
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition duration-300">
+              Your Brand
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Home
+              </a>
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/about.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                About
+              </a>
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/contact.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Contact
+              </a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="mobile-menu-button text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600" aria-label="Toggle menu">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Home
+            </a>
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/about.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              About
+            </a>
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/contact.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Contact
+            </a>
+          </div>  
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>
+
+  </cosmos-layout-header>
+
+
+  <div class="main-content">
+    <div class="container">
+      <!-- 
+        CONTENT CUSTOMIZATION GUIDE:
+        
+        This is the main content area for your home page. 
+        Replace this content with your own:
+        
+        1. Hero section
+        2. Feature highlights
+        3. About section
+        4. Call-to-action buttons
+        5. Image galleries
+        6. Testimonials
+        7. Contact forms
+        
+        The 'contenteditable="true"' attribute allows content editing 
+        in Cosmos CMS's live editor.
+      -->
+      
+      <main>
+        <!-- Hero Section -->
+        <div class="text-center py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg mb-12">
+          <h1 class="text-5xl font-bold mb-6" contenteditable="true">Tailwind CSS Starter Template</h1>
+          <p class="text-xl mb-8 max-w-2xl mx-auto" contenteditable="true">
+            A modern, responsive starter template built with Tailwind CSS. Perfect for creating beautiful websites with utility-first CSS classes.
+          </p>
+          <div class="space-x-4">
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+              Get Started
+            </button>
+            <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16" contenteditable="true">
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Fast Development</h3>
+            <p class="text-gray-600">Build websites faster with Tailwind's utility-first approach and pre-built components.</p>
+          </div>
+          
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Responsive Design</h3>
+            <p class="text-gray-600">Mobile-first responsive design that looks great on all devices and screen sizes.</p>
+          </div>
+          
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Customizable</h3>
+            <p class="text-gray-600">Easily customize colors, spacing, and components to match your brand and style.</p>
+          </div>
+        </div>
+        
+        <!-- Sample Components Section -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-center mb-12" contenteditable="true">Tailwind CSS Components</h2>
+          
+          <!-- Button Examples -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4" contenteditable="true">Button Styles</h3>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded transition duration-300">Primary</button>
+              <button class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded transition duration-300">Secondary</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition duration-300">Success</button>
+              <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded transition duration-300">Danger</button>
+              <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-2 rounded transition duration-300">Outline</button>
+            </div>
+          </div>
+          
+          <!-- Card Example -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4" contenteditable="true">Card Component</h3>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-md">
+              <div class="w-full h-48 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg mb-4"></div>
+              <h4 class="text-lg font-semibold mb-2">Sample Card</h4>
+              <p class="text-gray-600 mb-4">This is an example of a card component built with Tailwind CSS utility classes.</p>
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">Learn More</button>
+            </div>
+          </div>
+          
+          <!-- Alert Example -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4" contenteditable="true">Alert Components</h3>
+            <div class="space-y-4">
+              <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded">
+                <p class="font-bold">Info Alert</p>
+                <p>This is an informational alert using Tailwind CSS classes.</p>
+              </div>
+              <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded">
+                <p class="font-bold">Success Alert</p>
+                <p>This is a success alert with green styling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center bg-gray-50 p-12 rounded-lg" contenteditable="true">
+          <h2 class="text-3xl font-bold mb-4">Ready to Start Building?</h2>
+          <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            This Tailwind CSS starter template provides everything you need to create modern, responsive websites with beautiful design.
+          </p>
+          <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300 shadow-lg hover:shadow-xl">
+            Start Customizing
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+  <cosmos-layout-footer>
+    <div class="footer">
+      <div class="container">
+        <!-- 
+          FOOTER CUSTOMIZATION:
+          
+          This is a basic footer structure. Customize it based on your needs
+        -->
+        
+        <footer>
+          <div class="text-center">
+            <p class="text-muted">
+              &copy; 2025 Your Website Name. All rights reserved.
+            </p>
+            <!-- Add more footer content as needed -->
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

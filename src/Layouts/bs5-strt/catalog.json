@@ -1,10 +1,46 @@
 {
-    "Pages" : [
+    "Pages": [
         {
             "Title": "Home Page",
             "Type": "home",
-            "Description": "Website home page for this layout.",
+            "Description": "Bootstrap 5 starter template home page with hero section and feature cards.",
             "Path": "home.html"
+        },
+        {
+            "Title": "About Page",
+            "Type": "content",
+            "Description": "About page with team member cards and company information section.",
+            "Path": "about.html"
+        },
+        {
+            "Title": "Contact Page",
+            "Type": "content",
+            "Description": "Contact form page with Bootstrap validation and interactive elements.",
+            "Path": "contact.html"
+        },
+        {
+            "Title": "Products & Services Catalog",
+            "Type": "content",
+            "Description": "Comprehensive catalog page with filtering and search functionality for showcasing products and services.",
+            "Path": "gallery.html"
+        },
+        {
+            "Title": "Blog Page",
+            "Type": "content",
+            "Description": "Professional blog page with search functionality, category filtering, and newsletter signup.",
+            "Path": "blog.html"
+        },
+        {
+            "Title": "Portfolio Page",
+            "Type": "content",
+            "Description": "Professional portfolio showcase with project filtering, lightbox gallery, and interactive design elements.",
+            "Path": "portfolio.html"
+        },
+        {
+            "Title": "Testimonials Page",
+            "Type": "content",
+            "Description": "Client testimonials and reviews page with filtering, carousel showcase, and trust indicators.",
+            "Path": "testimonials.html"
         }
     ]
 }

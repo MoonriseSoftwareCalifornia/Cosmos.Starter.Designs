@@ -1,0 +1,1291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Starter Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+  <!-- Required for content edited with the Live editor to display correctly -->
+  <link rel="stylesheet" href="/css/ckeditor-content.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: .25rem;
+    }
+
+    .icon-list li::before {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: .5rem;
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+    }
+  </style>
+
+<!-- Testimonials Page Custom Styles -->
+<style>
+    /* Hero Section */
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(102, 16, 242, 0.9) 100%);
+        z-index: 1;
+    }
+    
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .min-vh-50 {
+        min-height: 50vh;
+    }
+
+    .hero-stats .stat-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+    }
+    
+    .hero-stats .stat-item:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Testimonial Carousel */
+    .testimonial-featured {
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+    .testimonial-avatar:hover {
+        transform: scale(1.1);
+    }
+    
+    .testimonial-stars {
+        font-size: 1.2rem;
+    }
+    
+    .testimonial-stars i {
+        margin: 0 2px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 102, 204, 0.8);
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+        background: rgba(0, 102, 204, 1);
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    .carousel-control-prev {
+        left: -25px;
+    }
+    
+    .carousel-control-next {
+        right: -25px;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: -30px;
+    }
+    
+    .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 6px;
+        background-color: rgba(0, 102, 204, 0.5);
+        border: none;
+        transition: all 0.3s ease;
+    }
+    
+    .carousel-indicators button.active {
+        background-color: #0066cc;
+        transform: scale(1.2);
+    }
+
+    /* Testimonial Cards */
+    .testimonial-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 102, 204, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+        border-color: rgba(0, 102, 204, 0.3);
+    }
+    
+    .testimonial-content {
+        flex-grow: 1;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 0;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 102, 204, 0.1);
+    }
+    
+    .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border: 2px solid rgba(0, 102, 204, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .testimonial-card:hover .testimonial-author img {
+        transform: scale(1.05);
+        border-color: rgba(0, 102, 204, 0.3);
+    }
+
+    /* Filter Buttons */
+    .testimonial-filters {
+        margin-bottom: 40px;
+    }
+    
+    .filter-btn {
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid #0066cc;
+        margin: 5px;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+        background-color: #0066cc;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    }
+
+    /* Testimonial Item Animation */
+    .testimonial-item {
+        transition: all 0.3s ease;
+    }
+    
+    .testimonial-item.hidden {
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none;
+    }
+
+    /* Client Logos */
+    .client-logo {
+        padding: 20px;
+        transition: all 0.3s ease;
+        filter: grayscale(100%);
+        opacity: 0.6;
+    }
+    
+    .client-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    
+    .client-logo img {
+        max-height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+    }
+
+    /* Star Ratings Animation */
+    @keyframes starGlow {
+        0%, 100% { text-shadow: 0 0 5px rgba(255, 193, 7, 0.3); }
+        50% { text-shadow: 0 0 15px rgba(255, 193, 7, 0.6), 0 0 25px rgba(255, 193, 7, 0.4); }
+    }
+    
+    .testimonial-card:hover .testimonial-stars i {
+        animation: starGlow 2s ease-in-out infinite;
+    }
+
+    /* Quote Styling */
+    .blockquote {
+        position: relative;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .blockquote::before {
+        content: '"';
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 60px 0;
+        }
+        
+        .display-4 {
+            font-size: 2.5rem;
+        }
+        
+        .testimonial-featured {
+            padding: 30px 20px;
+        }
+        
+        .testimonial-card {
+            padding: 25px 20px;
+        }
+        
+        .hero-stats {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero-stats .stat-item {
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .testimonial-card {
+            padding: 20px 15px;
+        }
+        
+        .testimonial-author {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        
+        .hero-section .lead {
+            font-size: 1.1rem;
+        }
+        
+        .blockquote {
+            font-size: 1rem;
+        }
+        
+        .display-5 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Loading Animation */
+    .testimonials-loading {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    .testimonials-loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #0066cc;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+    }
+    
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Accessibility Improvements */
+    .testimonial-card:focus-within {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+    }
+    
+    .filter-btn:focus {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+    }
+
+    /* Smooth Animations */
+    .testimonial-item,
+    .testimonial-card,
+    .client-logo,
+    .filter-btn {
+        will-change: transform;
+    }
+
+    /* Print Styles */
+    @media print {
+        .carousel-control-prev,
+        .carousel-control-next,
+        .carousel-indicators,
+        .testimonial-filters {
+            display: none !important;
+        }
+        
+        .testimonial-card {
+            break-inside: avoid;
+            box-shadow: none;
+            border: 1px solid #ddd;
+        }
+    }
+</style>
+
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="fs-4">Starter template</span>
+        </a>
+      </header>
+    </div>
+
+  </cosmos-layout-header>
+
+<!-- Testimonials Page Content -->
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5 mb-5">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4" contenteditable="true">What Our Clients Say</h1>
+                <p class="lead mb-4" contenteditable="true">Discover why thousands of clients trust us with their most important projects and continue to choose us for their business needs.</p>
+                <div class="hero-stats d-flex flex-wrap justify-content-center gap-4 mt-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-number h2 mb-1" contenteditable="true">500+</div>
+                        <small contenteditable="true">Happy Clients</small>
+                    </div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number h2 mb-1" contenteditable="true">4.9/5</div>
+                        <small contenteditable="true">Average Rating</small>
+                    </div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number h2 mb-1" contenteditable="true">98%</div>
+                        <small contenteditable="true">Satisfaction Rate</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Testimonials -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold mb-3" contenteditable="true">Featured Reviews</h2>
+                <p class="lead text-muted" contenteditable="true">Hear directly from our valued clients about their experiences</p>
+            </div>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <div id="testimonialCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Featured Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="testimonial-featured text-center">
+                                <div class="testimonial-stars mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <blockquote class="blockquote mb-4">
+                                    <p class="fs-4 fst-italic" contenteditable="true">"Working with this team has been an absolute game-changer for our business. Their attention to detail and commitment to excellence exceeded all our expectations. The project was delivered on time and within budget."</p>
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <img src="https://via.placeholder.com/80x80/0066cc/ffffff?text=SC" alt="Sarah Chen" class="testimonial-avatar rounded-circle mb-3">
+                                    <h5 class="mb-1" contenteditable="true">Sarah Chen</h5>
+                                    <p class="text-muted" contenteditable="true">CEO, TechStart Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="testimonial-featured text-center">
+                                <div class="testimonial-stars mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <blockquote class="blockquote mb-4">
+                                    <p class="fs-4 fst-italic" contenteditable="true">"The level of professionalism and expertise demonstrated throughout our collaboration was outstanding. They transformed our vision into reality and provided ongoing support that goes above and beyond."</p>
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <img src="https://via.placeholder.com/80x80/28a745/ffffff?text=MR" alt="Michael Rodriguez" class="testimonial-avatar rounded-circle mb-3">
+                                    <h5 class="mb-1" contenteditable="true">Michael Rodriguez</h5>
+                                    <p class="text-muted" contenteditable="true">Founder, Digital Innovations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="testimonial-featured text-center">
+                                <div class="testimonial-stars mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <blockquote class="blockquote mb-4">
+                                    <p class="fs-4 fst-italic" contenteditable="true">"From initial consultation to final delivery, every interaction was seamless and professional. The results speak for themselves - our revenue increased by 40% within six months of launch."</p>
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <img src="https://via.placeholder.com/80x80/fd7e14/ffffff?text=EJ" alt="Emily Johnson" class="testimonial-avatar rounded-circle mb-3">
+                                    <h5 class="mb-1" contenteditable="true">Emily Johnson</h5>
+                                    <p class="text-muted" contenteditable="true">Marketing Director, GrowthCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- All Testimonials Grid -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold mb-3" contenteditable="true">Client Reviews</h2>
+                <p class="lead text-muted" contenteditable="true">Browse through all our client testimonials and success stories</p>
+                
+                <!-- Filter Options -->
+                <div class="testimonial-filters mt-4">
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn active" data-filter="all">All Reviews</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="web-development">Web Development</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="consulting">Consulting</button>
+                    <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="design">Design</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4" id="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="web-development">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"Exceptional work on our e-commerce platform. The team delivered a robust, scalable solution that has significantly improved our online sales conversion rates."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/6f42c1/ffffff?text=DW" alt="David Wilson" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">David Wilson</h6>
+                            <small class="text-muted" contenteditable="true">E-commerce Director, ShopSmart</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="mobile-app">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"Our mobile app project was handled with incredible expertise. The user experience is seamless, and our customer engagement has increased by 60% since launch."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/e83e8c/ffffff?text=LT" alt="Lisa Thompson" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Lisa Thompson</h6>
+                            <small class="text-muted" contenteditable="true">Product Manager, FitTrack</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="design">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"The brand identity redesign exceeded our expectations. Our new visual identity perfectly captures our company values and has received overwhelmingly positive feedback."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/20c997/ffffff?text=JM" alt="James Mitchell" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">James Mitchell</h6>
+                            <small class="text-muted" contenteditable="true">Creative Director, BrandCorp</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="consulting">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"Their strategic consulting helped us optimize our digital processes and reduce operational costs by 30%. The insights provided were invaluable to our growth."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/17a2b8/ffffff?text=AD" alt="Amanda Davis" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Amanda Davis</h6>
+                            <small class="text-muted" contenteditable="true">Operations Manager, TechFlow</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="web-development">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"The corporate website they built for us is not only beautiful but also highly functional. Our online presence has never been stronger, and lead generation has tripled."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/dc3545/ffffff?text=RG" alt="Robert Garcia" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Robert Garcia</h6>
+                            <small class="text-muted" contenteditable="true">Marketing Lead, ProServices</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="mobile-app">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"From concept to app store, the development process was smooth and transparent. The final product exceeded our requirements and user feedback has been fantastic."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/ffc107/ffffff?text=NK" alt="Nina Kumar" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Nina Kumar</h6>
+                            <small class="text-muted" contenteditable="true">Startup Founder, InnovateLab</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="design">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"The UI/UX design work was phenomenal. They created an intuitive interface that our users love, resulting in a 45% increase in user retention rates."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/6610f2/ffffff?text=CT" alt="Carlos Torres" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Carlos Torres</h6>
+                            <small class="text-muted" contenteditable="true">UX Director, UserFirst</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="consulting">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"Their digital transformation strategy helped modernize our entire operation. The team's expertise and guidance were instrumental in our successful transition to new technologies."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/198754/ffffff?text=SP" alt="Sophie Parker" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Sophie Parker</h6>
+                            <small class="text-muted" contenteditable="true">CTO, ModernTech</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="col-lg-4 col-md-6 testimonial-item" data-category="web-development">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text" contenteditable="true">"Outstanding support and maintenance services. They've kept our systems running smoothly for over two years with minimal downtime and quick response times."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/fd7e14/ffffff?text=BL" alt="Brian Lee" class="testimonial-avatar rounded-circle">
+                        <div>
+                            <h6 class="mb-0" contenteditable="true">Brian Lee</h6>
+                            <small class="text-muted" contenteditable="true">IT Manager, ReliableSystems</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Indicators -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold mb-3" contenteditable="true">Trusted by Industry Leaders</h2>
+                <p class="lead text-muted" contenteditable="true">Join hundreds of satisfied clients who trust us with their success</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=Client+Logo" alt="Client Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=Partner+Co" alt="Partner Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=Enterprise" alt="Enterprise Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=StartupX" alt="Startup Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=TechCorp" alt="TechCorp Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="client-logo text-center">
+                    <img src="https://via.placeholder.com/120x60/f8f9fa/6c757d?text=InnovateX" alt="Innovation Logo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4" contenteditable="true">Ready to Join Our Success Stories?</h2>
+                <p class="lead mb-4" contenteditable="true">Let's discuss how we can help you achieve your goals and become our next success story.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="#" class="btn btn-light btn-lg">Start Your Project</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Page JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Testimonial filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    
+    // Filter testimonials
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Add loading state
+            testimonialsGrid.classList.add('testimonials-loading');
+            
+            setTimeout(() => {
+                // Filter items
+                testimonialItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+                
+                // Remove loading state
+                testimonialsGrid.classList.remove('testimonials-loading');
+            }, 300);
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Animate hero statistics on scroll
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    animateNumber(stat);
+                });
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        statsObserver.observe(heroStats);
+    }
+    
+    // Number animation function
+    function animateNumber(element) {
+        const finalText = element.textContent;
+        const hasPercent = finalText.includes('%');
+        const hasPlus = finalText.includes('+');
+        const hasSlash = finalText.includes('/');
+        
+        // Extract numeric value
+        let numericValue = parseFloat(finalText.replace(/[^\d.]/g, ''));
+        
+        if (isNaN(numericValue)) return;
+        
+        let current = 0;
+        const increment = numericValue / 60; // Animation duration
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= numericValue) {
+                current = numericValue;
+                clearInterval(timer);
+            }
+            
+            let displayValue = hasSlash ? current.toFixed(1) : Math.floor(current);
+            
+            if (hasPercent) displayValue += '%';
+            if (hasPlus) displayValue += '+';
+            if (hasSlash) displayValue += '/5';
+            
+            element.textContent = displayValue;
+        }, 16);
+    }
+    
+    // Testimonial card hover effects
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Carousel auto-play control
+    const carousel = document.getElementById('testimonialCarousel');
+    if (carousel) {
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 8000, // 8 seconds
+            wrap: true,
+            keyboard: true
+        });
+        
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => {
+            carouselInstance.pause();
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            carouselInstance.cycle();
+        });
+    }
+    
+    // Lazy loading for images
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.style.opacity = '0';
+                img.onload = () => {
+                    img.style.transition = 'opacity 0.3s ease';
+                    img.style.opacity = '1';
+                };
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    const testimonialImages = document.querySelectorAll('.testimonial-avatar, .client-logo img');
+    testimonialImages.forEach(img => imageObserver.observe(img));
+    
+    // Search functionality for testimonials
+    function setupTestimonialSearch() {
+        const searchInput = document.getElementById('testimonial-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                testimonialItems.forEach(item => {
+                    const text = item.querySelector('.testimonial-text').textContent.toLowerCase();
+                    const author = item.querySelector('h6').textContent.toLowerCase();
+                    const company = item.querySelector('small').textContent.toLowerCase();
+                    
+                    const matchesSearch = text.includes(searchTerm) || 
+                                        author.includes(searchTerm) || 
+                                        company.includes(searchTerm);
+                    
+                    if (matchesSearch || searchTerm === '') {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        }
+    }
+    
+    // Initialize search if element exists
+    setupTestimonialSearch();
+    
+    // Keyboard navigation for filters
+    filterBtns.forEach((btn, index) => {
+        btn.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const nextIndex = e.key === 'ArrowRight' ? 
+                    (index + 1) % filterBtns.length : 
+                    (index - 1 + filterBtns.length) % filterBtns.length;
+                filterBtns[nextIndex].focus();
+            }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+    
+    // Add ARIA labels for accessibility
+    filterBtns.forEach(btn => {
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('aria-pressed', btn.classList.contains('active'));
+    });
+    
+    // Update ARIA labels when filter changes
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+            this.setAttribute('aria-pressed', 'true');
+        });
+    });
+    
+    // Testimonial card reading functionality
+    testimonialCards.forEach(card => {
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                // Focus on the testimonial text for screen readers
+                const testimonialText = this.querySelector('.testimonial-text');
+                if (testimonialText) {
+                    testimonialText.focus();
+                }
+            }
+        });
+        
+        // Make cards focusable
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'article');
+        card.setAttribute('aria-label', 'Customer testimonial');
+    });
+    
+    // Performance optimization: Debounce scroll events
+    let scrollTimer = null;
+    window.addEventListener('scroll', function() {
+        if (scrollTimer) {
+            clearTimeout(scrollTimer);
+        }
+        scrollTimer = setTimeout(function() {
+            // Add any scroll-based animations here
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-bg');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        }, 10);
+    });
+    
+    // Star rating hover effects
+    const starRatings = document.querySelectorAll('.testimonial-stars');
+    starRatings.forEach(rating => {
+        const stars = rating.querySelectorAll('i');
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.style.transform = 'scale(1.2)';
+                        s.style.color = '#ffd700';
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                stars.forEach(s => {
+                    s.style.transform = 'scale(1)';
+                    s.style.color = '';
+                });
+            });
+        });
+    });
+    
+    // Copy testimonial functionality
+    function copyTestimonial(card) {
+        const text = card.querySelector('.testimonial-text').textContent;
+        const author = card.querySelector('h6').textContent;
+        const company = card.querySelector('small').textContent;
+        
+        const testimonialText = `"${text}" - ${author}, ${company}`;
+        
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(testimonialText).then(() => {
+                showNotification('Testimonial copied to clipboard!');
+            });
+        }
+    }
+    
+    // Add copy buttons to testimonials (optional)
+    testimonialCards.forEach(card => {
+        const copyBtn = document.createElement('button');
+        copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
+        copyBtn.className = 'btn btn-sm btn-outline-primary copy-testimonial';
+        copyBtn.style.position = 'absolute';
+        copyBtn.style.top = '15px';
+        copyBtn.style.right = '15px';
+        copyBtn.style.opacity = '0';
+        copyBtn.style.transition = 'opacity 0.3s ease';
+        copyBtn.title = 'Copy testimonial';
+        
+        card.style.position = 'relative';
+        card.appendChild(copyBtn);
+        
+        card.addEventListener('mouseenter', () => {
+            copyBtn.style.opacity = '0.7';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            copyBtn.style.opacity = '0';
+        });
+        
+        copyBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            copyTestimonial(card);
+        });
+    });
+    
+    // Simple notification system
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.opacity = '1';
+        }, 100);
+        
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+    
+    console.log('Testimonials page initialized successfully');
+});
+
+// Utility function to add more testimonials dynamically
+function addTestimonial(testimonial) {
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    const testimonialItem = document.createElement('div');
+    testimonialItem.className = 'col-lg-4 col-md-6 testimonial-item';
+    testimonialItem.setAttribute('data-category', testimonial.category);
+    
+    testimonialItem.innerHTML = `
+        <div class="testimonial-card h-100">
+            <div class="testimonial-content">
+                <div class="testimonial-stars mb-3">
+                    ${Array(testimonial.rating).fill('<i class="fas fa-star text-warning"></i>').join('')}
+                </div>
+                <p class="testimonial-text">${testimonial.text}</p>
+            </div>
+            <div class="testimonial-author">
+                <img src="${testimonial.avatar}" alt="${testimonial.name}" class="testimonial-avatar rounded-circle">
+                <div>
+                    <h6 class="mb-0">${testimonial.name}</h6>
+                    <small class="text-muted">${testimonial.title}, ${testimonial.company}</small>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    testimonialsGrid.appendChild(testimonialItem);
+}
+
+// Analytics tracking for testimonial interactions
+function trackTestimonialInteraction(action, testimonialId) {
+    // Example analytics tracking
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            event_category: 'Testimonials',
+            event_label: testimonialId
+        });
+    }
+}
+</script>
+
+
+  <cosmos-layout-footer>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

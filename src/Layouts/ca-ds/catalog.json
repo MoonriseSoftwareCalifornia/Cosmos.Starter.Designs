@@ -3,8 +3,14 @@
 		{
 			"Title": "Home Page",
 			"Type": "home",
-			"Description": "Website home page for this layout.",
+			"Description": "California Design System home page with hero section and cards.",
 			"Path": "home.html"
+		},
+		{
+			"Title": "Layout Page",
+			"Type": "layout",
+			"Description": "Basic layout page for California Design System.",
+			"Path": "layout.html"
 		}
 	]
 }

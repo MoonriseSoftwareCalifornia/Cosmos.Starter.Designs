@@ -1,0 +1,82 @@
+    <!-- 
+      Defines the code that should appear at the very top of each page.
+
+      Please note:
+          * Only put in this file the code that should appear at the
+            head of every page on your website.
+          * If you are using Cosmos CMS' built-in dynamic navigation tool, which 
+            depends on bootstrap, add the following code within the nav bar:
+            
+            <div class="collapse navbar-collapse" id="navbarExample01" crx="true">
+                <!-- {COSMOS-UL-NAV} ->
+            </div>
+
+          * Use of the navigation tools is optional! If you don't use bootstrap,
+            then don't use this option.
+    -->
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo/Brand -->
+          <div class="flex-shrink-0">
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition duration-300">
+              Your Brand
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Home
+              </a>
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/about.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                About
+              </a>
+              <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/contact.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">
+                Contact
+              </a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="mobile-menu-button text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600" aria-label="Toggle menu">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/home.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Home
+            </a>
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/about.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              About
+            </a>
+            <a href="https://cosmos-layouts.moonrise.net/Layouts/tailwind-strt/contact.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 text-base font-medium transition duration-300">
+              Contact
+            </a>
+          </div>  
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>

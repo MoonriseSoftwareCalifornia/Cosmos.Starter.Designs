@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <meta name="author" content="State of California">
     <meta name="description"
-        content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.">
+        content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians' needs.">
     <meta name="keywords" content="California, government, design system">
     <link rel="canonical" href="https://designsystem.webstandards.ca.gov/">
     <meta property="og:url" content="https://designsystem.webstandards.ca.gov/">
     <meta property="og:description"
-        content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.">
+        content="The California Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians' needs.">
     <meta property="og:title" content="California Design System | California Design System">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://designsystem.webstandards.ca.gov/img/thumbnail.png">
@@ -33,13 +33,6 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://www.google-analytics.com/">
 
-    <!-- The CA Design System CDN CSS -->
-
-    <link href="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/dist/cagov.css" rel="stylesheet">
-
-    <!-- Required for content edited with the Live editor to display correctly -->
-    <link rel="stylesheet" href="/css/ckeditor-content.css">
-    
     <!--
         'Layouts' with Cosmos CMS are used to set visual and functional
         consistency across all web pages on your website.
@@ -57,17 +50,19 @@
             * Page specific code is injected by Cosmos CMS automatically below.
     -->
     <!-- ADD LAYOUT HEAD CONTENT HERE -->
+    <!-- The CA Design System CDN CSS -->
+    <link href="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/dist/cagov.css" rel="stylesheet">
+
+    <!-- Required for content edited with the Live editor to display correctly -->
+    <link rel="stylesheet" href="/css/ckeditor-content.css">
 
 
-    <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
 </head>
 
 <body>
-
-    <cosmos-layout-header>
+  <cosmos-layout-header>
         <!-- Put your layout header code here -->
-
-
         <header class="header-container">
             <div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
 
@@ -284,22 +279,8 @@
             </cagov-site-navigation>
             <!--end site-navigation-->
 
-
         </header>
-
-
-    </cosmos-layout-header>
-
-    <!--
-      
-               This is where your page specific content will get injected by Cosmos CMS.
-      
-               It is a good idea to provide example content here so when people preview
-               your template, they can visualize what it will look like.
-      
-               TIP! Put compelling example content here to show people how great your layout is!
-      
-          -->
+  </cosmos-layout-header>
 
     <div id="page-container" class="page-container-ds m-b-0">
         <div class="main-content-ds single-column landing" id="main-content">
@@ -314,7 +295,7 @@
                                 <div class="cagov-hero-body-content p-y-4">
                                     <p class="m-b-3">
                                         The Design System makes it easy for state digital teams to build accessible,
-                                        consistent, and performant services and products to meet Californians’ needs.
+                                        consistent, and performant services and products to meet Californians' needs.
                                     </p>
 
                                     <a class="btn-primary-outline"
@@ -422,8 +403,8 @@
                                     <div class="highlight-text">
                                         <h3>Be concise</h3>
                                         <h4 class="mt-0">Principle 4</h4>
-                                        <p>Things are easy to use when they’re simple. Ask yourself, “Does this word,
-                                            image, or functionality help people do what they need to do?”</p><a
+                                        <p>Things are easy to use when they're simple. Ask yourself, "Does this word,
+                                            image, or functionality help people do what they need to do?"</p><a
                                             class="btn-primary-outline d-inline-block"
                                             href="https://designsystem.webstandards.ca.gov/principles/">See all the
                                             principles</a>
@@ -433,26 +414,14 @@
                         </article>
                     </cagov-highlight-section>
 
-
                 </main>
             </div>
         </div>
     </div>
 
 
-    <!--
-      
-              The <cosmos-layout-footer></cosmos-layout-footer> tags are important.  All code
-              inbetween these tags will appear at the bottom of every page in your website.
-      
-              Notes:
-      
-                  * Put HTML footer blocks that will appear on every page.
-                  * If you have a framework that requires JavaScript libraries injected at the end
-                    of each page (bootstrap for example), put those script links here as well.
-      
-          -->
-    <cosmos-layout-footer>
+
+  <cosmos-layout-footer>
         <!--
                   Put your layout end-of-page code here
               -->
@@ -571,14 +540,12 @@
         <!--JS goes here-->
         <!-- The CA Design System JavaScript CDN -->
         <script src="https://california.azureedge.net/cdt/CAWeb/combined-css/2.0.0/dist/index.js"></script>
-    </cosmos-layout-footer>
-    <!--
-      
-              Page-specific end of page content is injected here by Cosmos CMS.
-              Note, this is always after the the layout code.
-      
-          -->
+  </cosmos-layout-footer>
 
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
 
 </body>
 

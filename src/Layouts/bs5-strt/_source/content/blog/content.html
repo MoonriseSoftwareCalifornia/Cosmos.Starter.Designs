@@ -1,0 +1,256 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-10 mx-auto px-4 px-md-5">
+      <!-- Hero Section -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">Our Blog</h1>
+        <p class="fs-5 text-muted">Stay updated with the latest insights, tutorials, and industry trends from our team of experts.</p>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="row mb-5">
+  <div class="col-md-8">
+    <!-- Search Box -->
+    <div class="input-group input-group-lg">
+      <span class="input-group-text bg-light border-end-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </span>
+      <input type="text" class="form-control border-start-0" id="blogSearch" placeholder="Search blog posts..." aria-label="Search blog posts">
+    </div>
+  </div>
+  <div class="col-md-4 mt-3 mt-md-0">
+    <!-- Category Filter -->
+    <select class="form-select form-select-lg" id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="web-development">Web Development</option>
+      <option value="design">Design</option>
+      <option value="business">Business</option>
+      <option value="tutorials">Tutorials</option>
+      <option value="news">News</option>
+    </select>
+  </div>
+</div>
+
+<!-- Featured Post -->
+<div class="featured-post rounded-3 p-4 mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <span class="badge bg-primary mb-2">Featured</span>
+      <h2 class="h3 mb-3">The Future of Web Development: Trends to Watch in 2025</h2>
+      <p class="mb-3">Explore the cutting-edge technologies and methodologies that are shaping the future of web development. From AI integration to progressive web apps, discover what's next.</p>
+      <div class="blog-meta mb-3">
+        <span class="me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+          September 10, 2025
+        </span>
+        <span class="me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person me-1" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+          </svg>
+          Sarah Johnson
+        </span>
+        <span class="badge bg-secondary">Web Development</span>
+      </div>
+      <a href="#" class="btn btn-primary">Read Full Article</a>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="https://picsum.photos/400/250?random=1" class="img-fluid rounded-3" alt="Featured Post">
+    </div>
+  </div>
+</div>
+
+<!-- Blog Posts Grid -->
+<div class="row g-4" id="blogGrid">
+  <!-- Web Development Posts -->
+  <div class="col-md-6 blog-post-item" data-category="web-development">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=2" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-primary blog-category-badge">Web Development</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Getting Started with Bootstrap 5: A Complete Guide</h5>
+        <p class="card-text blog-excerpt">Learn the fundamentals of Bootstrap 5 and how to create responsive, modern web interfaces with this comprehensive tutorial covering components, utilities, and best practices.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 8, 2025 • 5 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="design">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=3" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-success blog-category-badge">Design</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">UI/UX Design Principles for Modern Web Applications</h5>
+        <p class="card-text blog-excerpt">Discover the essential design principles that create exceptional user experiences. From color theory to user psychology, learn what makes interfaces truly effective.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 6, 2025 • 7 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="business">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=4" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-warning text-dark blog-category-badge">Business</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Digital Transformation: Why Your Business Needs a Website</h5>
+        <p class="card-text blog-excerpt">In today's digital age, having a professional website isn't optional—it's essential. Learn why your business needs an online presence and how to get started.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 4, 2025 • 6 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="tutorials">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=5" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-info blog-category-badge">Tutorials</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Step-by-Step Guide to Responsive Web Design</h5>
+        <p class="card-text blog-excerpt">Master the art of responsive web design with this comprehensive tutorial. Learn CSS Grid, Flexbox, and media queries to create websites that work on any device.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            September 2, 2025 • 10 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="news">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=6" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-danger blog-category-badge">News</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Industry Update: Latest Web Development Trends</h5>
+        <p class="card-text blog-excerpt">Stay ahead of the curve with the latest trends in web development. From AI integration to new JavaScript frameworks, here's what's making waves in 2025.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            August 30, 2025 • 4 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 blog-post-item" data-category="design">
+    <div class="card blog-post-card">
+      <div class="position-relative overflow-hidden">
+        <img src="https://picsum.photos/400/200?random=7" class="card-img-top blog-post-image" alt="Blog Post">
+        <span class="badge bg-success blog-category-badge">Design</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Color Psychology in Web Design: Choose the Right Palette</h5>
+        <p class="card-text blog-excerpt">Colors evoke emotions and influence user behavior. Learn how to choose the perfect color palette for your website to enhance user experience and conversions.</p>
+        <div class="blog-meta mb-3">
+          <small class="text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3 me-1" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            </svg>
+            August 28, 2025 • 5 min read
+          </small>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- No Results Message -->
+<div id="noResults" class="text-center py-5" style="display: none;">
+  <div class="mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </div>
+  <h4 class="text-muted">No blog posts found</h4>
+  <p class="text-muted">Try adjusting your search or filter criteria</p>
+  <button class="btn btn-primary" onclick="clearBlogFilters()">Show All Posts</button>
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Blog pagination" class="mt-5">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        Previous
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Newsletter Signup -->
+<div class="text-center bg-light rounded-3 p-5 mt-5">
+  <h3 class="mb-3">Stay Updated</h3>
+  <p class="mb-4">Subscribe to our newsletter to get the latest blog posts and updates delivered to your inbox.</p>
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+        <small class="text-muted">We respect your privacy. Unsubscribe at any time.</small>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>

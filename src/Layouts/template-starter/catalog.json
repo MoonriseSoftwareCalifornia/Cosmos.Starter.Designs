@@ -1,0 +1,10 @@
+{
+    "Pages": [
+        {
+            "Title": "Home Page",
+            "Type": "home",
+            "Description": "Framework-agnostic starter template home page with modular component system.",
+            "Path": "home.html"
+        }
+    ]
+}

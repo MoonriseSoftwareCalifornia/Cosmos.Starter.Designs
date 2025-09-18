@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{LAYOUT:head}}
+{{LAYOUT:styles}}
+{{PAGE_HEAD}}
+
+  <!-- PAGE-SPECIFIC HEAD CONTENT WILL BE INJECTED BY COSMOS HERE -->
+</head>
+
+<body>
+  <cosmos-layout-header>
+{{LAYOUT:header}}
+  </cosmos-layout-header>
+
+{{PAGE_CONTENT}}
+
+{{PAGE_END}}
+
+  <cosmos-layout-footer>
+{{LAYOUT:footer}}
+  </cosmos-layout-footer>
+
+  <!--
+    Page-specific end of page content is injected here by Cosmos CMS.
+    Note, this is always after the layout code.
+  -->
+
+</body>
+
+</html>

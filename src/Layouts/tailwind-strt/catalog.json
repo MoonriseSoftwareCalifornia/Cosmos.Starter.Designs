@@ -1,0 +1,22 @@
+{
+    "Pages": [
+        {
+            "Title": "Home Page",
+            "Type": "home",
+            "Description": "Framework-agnostic starter template home page with modular component system.",
+            "Path": "home.html"
+        },
+        {
+            "Title": "About Us",
+            "Type": "about",
+            "Description": "Learn about our company, mission, values, and team members.",
+            "Path": "about.html"
+        },
+        {
+            "Title": "Contact Us",
+            "Type": "contact",
+            "Description": "Get in touch with us through our contact form, find our location, and view frequently asked questions.",
+            "Path": "contact.html"
+        }
+    ]
+}
