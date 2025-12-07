@@ -3,98 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosmos / SkyCMS Starter Designs</title>
+  <title>SkyCMS Starter Designs</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --panel: #111827;
-      --accent: #38bdf8;
-      --muted: #cbd5e1;
-      --text: #e2e8f0;
-      --border: #1f2937;
-      --shadow: 0 10px 40px rgba(0,0,0,0.35);
+      --bg: #ffffff;
+      --panel: #f9fafb;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --muted: #6b7280;
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --border: #e5e7eb;
+      --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
       --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-      --sans: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: var(--sans);
-      background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 25%),
-                  radial-gradient(circle at 80% 0%, rgba(99,102,241,0.12), transparent 22%),
-                  var(--bg);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
     header {
-      padding: 64px 24px 32px;
+      padding: 48px 24px 32px;
       text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
     }
     h1 {
       margin: 0 0 12px;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
       letter-spacing: -0.02em;
+      color: var(--text);
     }
     p.lead {
       margin: 0 auto;
       max-width: 720px;
-      color: var(--muted);
-      font-size: 1.05rem;
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+      line-height: 1.75;
     }
-    main { padding: 16px 24px 72px; }
+    main { padding: 48px 24px 72px; background: var(--bg); }
     .grid {
       display: grid;
-      gap: 16px;
+      gap: 24px;
       max-width: 960px;
       margin: 0 auto;
     }
     section {
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 8px;
+      padding: 24px;
       box-shadow: var(--shadow);
     }
-    h2 { margin: 0 0 12px; font-size: 1.25rem; }
-    ul { margin: 0 0 12px 18px; padding: 0; }
-    li { margin-bottom: 6px; }
+    h2 { 
+      margin: 0 0 16px; 
+      font-size: 1.5rem; 
+      font-weight: 600;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    li { color: var(--text-secondary); }
     code, pre {
       font-family: var(--mono);
-      background: #0b1221;
-      color: var(--accent);
+      background: #f3f4f6;
+      color: #1f2937;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+    }
+    code {
+      padding: 2px 6px;
     }
     pre {
-      padding: 14px;
+      padding: 16px;
       overflow-x: auto;
       margin: 0 0 12px;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    pre code {
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+    a { 
+      color: var(--accent); 
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover { 
+      color: var(--accent-hover);
+      text-decoration: underline; 
+    }
     .tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
-      border-radius: 20px;
-      background: rgba(56,189,248,0.12);
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #eff6ff;
       color: var(--accent);
-      border: 1px solid rgba(56,189,248,0.35);
-      font-size: 0.9rem;
+      border: 1px solid #bfdbfe;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
     .footer {
       text-align: center;
       color: var(--muted);
-      margin-top: 32px;
-      font-size: 0.95rem;
+      margin-top: 48px;
+      font-size: 0.875rem;
+    }
+    .design-section h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .design-pages {
+      margin: 8px 0;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="tag">Cosmos / SkyCMS</div>
-    <h1>Starter Designs</h1>
+    <img src="./images/SkyCMSLogoNoTextLightTransparent.png" 
+          alt="SkyCMS Logo" class="logo" />
+    <h1>SkyCMS Starter Designs</h1>
     <p class="lead">Example site layouts and page templates you can import into Cosmos CMS (SkyCMS). Each layout includes a build script that stitches together shared components and page content into ready-to-use HTML.</p>
   </header>
 
@@ -148,6 +193,55 @@ node build-templates.js</code></pre>
           <li>Run <code>node build-templates.js</code> inside your new layout folder to generate the outputs.</li>
           <li>Open a pull request when ready; once merged, your design joins the catalog.</li>
         </ol>
+      </section>
+
+      <!-- Bootstrap 5 Design -->
+      <section class="design-section">
+        <h3>1. Bootstrap 5 Design</h3>
+        <p><strong>Description:</strong> A clean, modern responsive layout built with Bootstrap 5. Includes extensive template pages for common website needs including home, about, contact, blog, portfolio, and testimonials.</p>
+        <p><strong>Example Pages:</strong></p>
+        <ul class="design-pages">
+          <li><a href="Layouts/bs5-strt/home.html">Home</a></li>
+          <li><a href="Layouts/bs5-strt/about.html">About</a></li>
+          <li><a href="Layouts/bs5-strt/contact.html">Contact</a></li>
+          <li><a href="Layouts/bs5-strt/catalogPage.html">Catalog</a></li>
+          <li><a href="Layouts/bs5-strt/blog.html">Blog</a></li>
+          <li><a href="Layouts/bs5-strt/portfolio.html">Portfolio</a></li>
+          <li><a href="Layouts/bs5-strt/testimonials.html">Testimonials</a></li>
+        </ul>
+      </section>
+
+      <!-- California Design System -->
+      <section class="design-section">
+        <h3>3. California Design System</h3>
+        <p><strong>Description:</strong> Built on the California Design System, designed for state digital teams to build accessible and performant services.</p>
+        <p><strong>Example Pages:</strong></p>
+        <ul class="design-pages">
+          <li><a href="Layouts/ca-ds/home.html">Home</a></li>
+          <li><a href="Layouts/ca-ds/layout.html">Layout</a></li>
+        </ul>
+      </section>
+
+      <!-- Tailwind CSS Design -->
+      <section class="design-section">
+        <h3>4. Tailwind CSS Design</h3>
+        <p><strong>Description:</strong> A utility-first approach using Tailwind CSS. Production-ready starter template with minimal setup.</p>
+        <p><strong>Example Pages:</strong></p>
+        <ul class="design-pages">
+          <li><a href="Layouts/tailwind-strt/home.html">Home</a></li>
+          <li><a href="Layouts/tailwind-strt/about.html">About</a></li>
+          <li><a href="Layouts/tailwind-strt/contact.html">Contact</a></li>
+        </ul>
+      </section>
+
+      <!-- Basic Starter Design -->
+      <section class="design-section">
+        <h3>5. Basic Starter Design</h3>
+        <p><strong>Description:</strong> A minimal, framework-agnostic starter template perfect for learning the build process or as a blank canvas for custom designs.</p>
+        <p><strong>Example Pages:</strong></p>
+        <ul class="design-pages">
+          <li><a href="Layouts/template-starter/home.html">Home</a></li>
+        </ul>
       </section>
 
       <section>

@@ -3,7 +3,7 @@
         {
             "Id": "bs5-strt",
             "Name": "1. Bootstrap 5 design",
-            "Description": "This layout is nearly the same used for the Cosmos WPS product website, and it is a good layout to learn Cosmos.  It uses Bootstrap with Material Design principles, and jQuery, and it contains a number of template pages to help you kick-start your website development.",
+            "Description": "A clean, modern responsive layout built with Bootstrap 5. Includes extensive template pages for common website needs including home, about, contact, blog, portfolio, and testimonials.",
             "License": "<a href='https://raw.githubusercontent.com/MoonriseSoftwareCalifornia/Cosmos.Starter.Layouts/main/src/Layouts/a01-cwps/LICENSE'>MIT</a>"
         },
         {
@@ -15,13 +15,13 @@
         {
             "Id": "tailwind-strt",
             "Name": "4. Tailwind CSS design",
-            "Description": "Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started. Complete documentation on how to use <a href='https://getbootstrap.com/'>Bootstrap</a> can be found on the <a href='https://getbootstrap.com/'>project website</a>.",
+            "Description": "A utility-first approach using Tailwind CSS. Production-ready starter template with minimal setup and customizable configuration. Includes home, about, and contact pages.",
             "License": "<a href='https://github.com/twbs/bootstrap/blob/main/LICENSE'>MIT</a>"
         },
         {
             "Id": "template-starter",
             "Name": "5. Basic starter design",
-            "Description": "Carousel full cover starter template from <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/' target='_blank'>Material Design</a>. Documentation for how to use this theme can be found at <a href='https://github.com/mdbootstrap/bootstrap-5-full-carousel-cover-template/'>GitHub</a>.",
+            "Description": "A minimal, framework-agnostic starter template perfect for learning the build process or as a blank canvas for custom designs. Simple home page with basic structure.",
             "License": "<a href='https://mdbootstrap.com/general/license/'>MIT</a>"
         }
     ]
