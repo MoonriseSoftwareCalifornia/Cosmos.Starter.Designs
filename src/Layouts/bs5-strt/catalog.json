@@ -22,7 +22,7 @@
             "Title": "Products & Services Catalog",
             "Type": "content",
             "Description": "Comprehensive catalog page with filtering and search functionality for showcasing products and services.",
-            "Path": "gallery.html"
+            "Path": "catalogPage.html"
         },
         {
             "Title": "Blog Page",
